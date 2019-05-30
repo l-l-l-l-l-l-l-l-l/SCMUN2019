@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="a52f2e63-38e3-45f8-966d-7fabd7b63413">
+  <component name="PublishConfigData">
     <serverData>
       <paths name="SCMUN">
         <serverdata>
@@ -10,6 +10,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="scmun.epizy.com" />
   </component>
 </project>
