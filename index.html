@@ -5,31 +5,176 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>SCMUN VIII | Home</title>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">-->
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
+  <!--Template Implimentation-->
+  <style>
+
+    html,
+    body,
+    header,
+    .jarallax {
+      height: 700px;
+    }
+
+    @media (max-width: 740px) {
+      html,
+      body,
+      header,
+      .jarallax {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .jarallax {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 560px) and (max-width: 650px) {
+      header .jarallax h5 {
+        margin-bottom: 1.5rem !important;
+      }
+    }
+
+    .top-nav-collapse {
+      background-color: rgba(2, 29, 82, 0.84) !important;
+    }
+    .navbar:not(.top-nav-collapse) {
+      background: transparent !important;
+    }
+    @media (max-width: 768px) {
+      .navbar:not(.top-nav-collapse) {
+        background: rgba(2, 29, 82, 0.84) !important;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: rgba(2, 29, 82, 0.84) !important;
+      }
+    }
+    h1 {
+      letter-spacing: 8px;
+    }
+    h5 {
+      letter-spacing: 3px;
+    }
+    .hr-light {
+      border-top: 3px solid #fff;
+      width: 80px;
+    }
+    footer.page-footer {
+      background-color: #6f7782;
+    }
+
+    @media (max-width: 450px) {
+      .btn-floating {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+  </style>
+
+  <!--Custom CSS-->
+  <style>
+    nav.navbar:not(.top-nav-collapse) div a img {
+      height: 35px !important;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Start your project here-->
-  hello!
+
+  <!--Main Navigation-->
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container-fluid px-xl-5 px-lg-3">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" id="logo" class="scmunlogo d-inline-block align-top"
+               alt="[logo]" style="height: 30px; padding: 0;">
+        </a>
+        <a href="#" class="navbar-brand">
+          <strong>SCMUN VIII</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+                aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <div class="mask rgba-black-light">
+        <div class="container h-100 d-flex justify-content-center align-items-center">
+          <div class="row pt-5 mt-3">
+            <div class="col-md-12">
+              <div class="text-center">
+                <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Prioritising Compassionate Leadership</strong></h1>
+                <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+                <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>South China Model United Nations</strong></h5>
+                <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Learn More</a>
+                <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facere labore, placeat praesentium quaerat sit totam? Aliquam amet dicta eos est excepturi facere facilis ipsum libero maiores nemo, nobis quod, voluptas! Ab alias animi aspernatur aut culpa delectus dolor dolores doloribus dolorum eaque eligendi esse est eum eveniet exercitationem in incidunt inventore ipsum labore libero minima nam necessitatibus odio officia, perspiciatis quis rem rerum sed soluta tenetur. Aliquid asperiores assumenda at dolorum eos, eveniet illum impedit inventore magnam maiores maxime modi obcaecati optio, praesentium provident quaerat quibusdam! Ab amet aperiam architecto deleniti doloremque ea earum facilis fuga incidunt iure maiores possimus, saepe temporibus? Ab aperiam architecto blanditiis cum deserunt dolore dolorum, esse ex incidunt labore molestias non nulla quos rerum sint tempora velit. Animi autem harum qui voluptates voluptatum. Accusamus aliquid asperiores aspernatur delectus minima, molestiae, nemo neque odit, quae sapiente tenetur totam vel! Accusamus, aliquid cupiditate dignissimos dolores esse id, illo modi quis rem sapiente tenetur unde, voluptate. Aliquam asperiores assumenda atque, consequuntur dicta distinctio dolor doloribus, eaque id illo, illum ipsa laboriosam minima molestiae qui reiciendis rerum! Ad dolore iure magnam neque numquam officia quae quas ullam! Dolor eos id illum incidunt maiores, praesentium quaerat sint ullam voluptatum. Aliquam at consectetur culpa cum doloribus eligendi enim expedita harum hic illo iure minima odit porro, praesentium soluta tempore vel vero, voluptate. Ad aperiam ea eligendi et explicabo, iure modi nobis placeat repudiandae. Architecto distinctio et excepturi impedit libero nemo obcaecati praesentium quas reiciendis sunt. Cupiditate, exercitationem inventore natus pariatur quasi repellendus sapiente velit. Eligendi esse, est iste minus molestiae neque nulla perferendis perspiciatis provident quaerat quam temporibus. Adipisci at corporis cumque dicta, doloribus earum enim facilis, harum ipsum, magni minima nobis nulla odio perspiciatis quam quasi quia quis repellendus saepe tempora totam unde vel veniam vero voluptates? Adipisci asperiores atque commodi dignissimos eligendi esse explicabo id illo maiores modi molestiae natus nemo nostrum pariatur placeat quaerat quos, repudiandae sed sint suscipit. Ab adipisci animi consequatur delectus, doloremque doloribus ea, eaque esse facilis hic id illo iste laudantium, magnam maiores neque officiis optio pariatur repellat sint soluta unde velit. Accusantium architecto autem cum debitis dolore doloremque quidem? A ab, adipisci aliquam atque autem beatae blanditiis consequatur culpa cum cupiditate deleniti dolor dolorem, dolores ducimus ea enim et fugiat fugit hic incidunt inventore, itaque iure laboriosam nihil nobis officia perferendis praesentium quae quas quia recusandae saepe tempore temporibus velit veritatis vitae voluptate? Aliquam architecto blanditiis commodi, dicta, dolores eveniet illum iure molestias natus officia officiis, placeat porro possimus repellendus sit ullam velit voluptate voluptates! Adipisci, asperiores consequuntur corporis deleniti dicta distinctio dolore earum exercitationem inventore ipsa ipsam iste libero minus natus necessitatibus nulla numquam odio pariatur perspiciatis possimus quae quam rem saepe sequi suscipit tempore temporibus. Aspernatur aut eligendi explicabo facilis fugit illum, ipsam laudantium neque odit provident quaerat quia ratione repudiandae sequi suscipit vero voluptatum. Cupiditate delectus dignissimos earum eius est ex libero, magnam officiis temporibus unde. Ab ad dignissimos, dolores esse, fuga inventore ipsam minus molestias numquam perspiciatis ratione.</p>
   <!-- /Start your project here-->
 
+
   <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+  </div>
 </body>
 
 </html>
