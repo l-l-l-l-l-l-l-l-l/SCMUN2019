@@ -49,19 +49,20 @@
     }
 
     .top-nav-collapse {
-      background-color: rgba(2, 29, 82, 0.84) !important;
+      background-color: rgba(2, 29, 82, 0.9) !important;
     }
     .navbar:not(.top-nav-collapse) {
-      background: transparent !important;
+      background: rgba(0, 0, 0, 0.4) !important;
+
     }
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       .navbar:not(.top-nav-collapse) {
-        background: rgba(2, 29, 82, 0.84) !important;
+        background: rgba(2, 29, 82, 0.9) !important;
       }
     }
     @media (min-width: 800px) and (max-width: 850px) {
       .navbar:not(.top-nav-collapse) {
-        background: rgba(2, 29, 82, 0.84) !important;
+        background: rgba(2, 29, 82, 0.9) !important;
       }
     }
     h1 {
@@ -89,10 +90,10 @@
 
   <!--Custom CSS-->
   <style>
-    nav.navbar:not(.top-nav-collapse) div a img {
-      height: 35px !important;
-      padding: 0;
-    }
+    /*nav.navbar:not(.top-nav-collapse) div a img {*/
+    /*  height: 35px !important;*/
+    /*  padding: 0;*/
+    /*}*/
   </style>
 </head>
 <body>
@@ -105,6 +106,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <div class="container-fluid px-xl-5 px-lg-3">
+        <!--Navbar structure-->
         <a class="navbar-brand" href="#">
           <img src="assets/logo.png" id="logo" class="scmunlogo d-inline-block align-top"
                alt="[logo]" style="height: 30px; padding: 0;">
@@ -116,28 +118,86 @@
                 aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!--/Navbar structure-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <!--LHS-->
           <ul class="navbar-nav mr-auto">
+            <!--Home Button-->
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
+            <!--Registration-->
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Register <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+            <!--Conference-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Conference
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="#">About</a>
+                <a class="dropdown-item" href="#">NCPA Director's Message</a>
+                <a class="dropdown-item" href="#">MUN Director's Message</a>
+                <a class="dropdown-item" href="#">Registration Process</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">History</a>
+                <a class="dropdown-item" href="#">Logistic Arrangements</a>
+                <a class="dropdown-item" href="#">Schedule</a>
+                <a class="dropdown-item" href="#">Venue</a>
+                <a class="dropdown-item" href="#">Awards Available</a>
+              </div>
+            </li>
+            <!--Committees-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Committees
+              </a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">United Nation Security Council (UNSC)</a>
+                <a class="dropdown-item" href="#">General Assembly 1 -- Disarmament & International Security (DISEC)</a>
+                <a class="dropdown-item" href="#">World Health Organisation (WHO)</a>
+                <a class="dropdown-item" href="#">Economic and Social Committee (ECOSOC)</a>
+                <a class="dropdown-item" href="#">General Assembly 3 -- Social, Cultural, and Humanitarian (SOCHUM)</a>
+                <a class="dropdown-item" href="#">United Nations Children's Fund (UNICEF)</a>
+              </div>
+            </li>
+            <!--Team-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SCMUN Team
+              </a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Managers</a>
+                <a class="dropdown-item" href="#">Officers</a>
+              </div>
+            </li>
+            <!--Resources-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Procedure and Rules</a>
+                <a class="dropdown-item" href="#">Contact</a>
+              </div>
             </li>
           </ul>
+          <!--/LHS-->
+
+          <!--RHS-->
           <form class="form-inline">
             <div class="md-form my-0">
               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             </div>
           </form>
+          <!--/RHS-->
         </div>
       </div>
     </nav>
 
-    <!-- Intro Section -->
+    <!--Intro Section -->
     <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="mask rgba-black-light">
         <div class="container h-100 d-flex justify-content-center align-items-center">
@@ -174,6 +234,9 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </div>
 </body>
 
