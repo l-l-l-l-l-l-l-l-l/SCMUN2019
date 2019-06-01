@@ -99,11 +99,9 @@
 </head>
 <body>
 
-  <!--Project Starts-->
-
-  <!--------------------------------->
+  <!------------------------>
   <!---------Header--------->
-  <!--------------------------------->
+  <!------------------------>
   <header>
 
     <!--Navbar-->
@@ -127,7 +125,7 @@
           <ul class="navbar-nav mr-auto">
             <!--Home Button-->
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#home" onclick="new WOW().init();">Home <span class="sr-only">(current)</span></a>
             </li>
             <!--Registration-->
             <li class="nav-item">
@@ -139,10 +137,10 @@
                 Conference
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="http://scmun.net/">Home</a>
+                <a class="dropdown-item" href="#home" onclick="new WOW().init();">Home</a>
                 <a class="dropdown-item" href="#about">About</a>
-                <a class="dropdown-item" href="#vision">Our Vision</a>
                 <a class="dropdown-item" href="#ncpaDirectorMessage">NCPA Director's Message</a>
+                <a class="dropdown-item" href="#vision">Our Vision</a>
                 <a class="dropdown-item" href="#munDirectorMessage">MUN Director's Message</a>
                 <a class="dropdown-item" href="#munDirectorMessage">Committees Available</a>
                 <a class="dropdown-item" href="#registrationProcess">Registration Process</a>
@@ -203,7 +201,7 @@
     </nav>
 
     <!--Intro Section -->
-    <div class="view jarallax" data-jarallax='{"speed": 0.3}' style="background-image: url(assets/photos/School/CafeteriaSunrise.JPG); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.3}' style="background-image: url(assets/photos/School/CafeteriaSunrise.JPG); background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="mask rgba-black-slight">
         <div class="container h-100 d-flex justify-content-center align-items-center">
           <div class="row pt-5 mt-3">
@@ -289,6 +287,44 @@
       </div>
     </div>
 
+    <!--NCPA Director's Message-->
+    <div class="container-fluid color-block grey lighten-3">
+      <!--Vision subcontainer-->
+      <div class="container pt-3">
+        <!--About Section-->
+        <section id="ncpaDirectorMessage" class="section pt-2 pb-5">
+
+          <!--Heading-->
+          <h1 class="text-center text-uppercase font-weight-bold mt-5 mb-5 pb-4 wow fadeIn"
+              data-wow-delay="0.2s">NCPA Director's Message</h1>
+
+          <!--Content-->
+          <img class="z-depth-2 ml-5 mb-4" src="assets/photos/teachers/person_Director.png" alt="" style="float: right">
+
+          <p class="text-justify">
+            Dear SCMUN Attendees,
+          </p>
+          <p class="text-justify">
+            To our guests from elsewhere, welcome to Nansha College Preparatory Academy!  We are very honoured to host you at this event, which we have proudly sponsored since our school's founding in 2012.  As NCPA students will tell you, the mission of this school is to ensure that our students achieve academic and social excellence.  I can think of no co-curricular activity that better aligns with our mission than Model UN!
+          </p>
+          <p class="text-justify">
+            We aim for NCPA students to become effective negotiators, collaborative learners, resourceful planners and principled achievers.  In the next two days at our school, you all will consider the great, global issues of the day; you will work together to craft solutions; you will negotiate with those who are affected; and you will achieve consensus on your resolutions.  I wish you a productive and meaningful experience here!
+          </p>
+          <img class="mb-2" src="assets/icons/directorS.svg" alt="" style="max-width: 140px;">
+          <p class="text-justify font-weight-bolder mb-1">
+            Michael Cyrus, Ed.D.
+          </p>
+          <p class="text-justify font-weight-bolder mb-1">
+            Director
+          </p>
+          <p class="text-justify font-weight-bolder font-italic">
+            Nansha College Preparatory Academy
+          </p>
+
+        </section>
+      </div>
+    </div>
+
     <!--Vision Container-->
     <div class="container-fluid color-block white">
       <!--Vision subcontainer-->
@@ -301,8 +337,8 @@
               data-wow-delay="0.2s">Our Vision</h1>
 
           <!--Content-->
-          <p class="aboutText mb-4 text-justify">
-            In SCMUN VIII, we aim to foster compassionate leadership that are prepared for the changing 21th century by developing delegates' skills to negotiate, collaborate, plan and eventually achieve.
+          <p class="aboutText mb-4 text-justify mt-3 pt-5">
+            In SCMUN VIII, we aim to foster compassionate leaders that are prepared for the challenges of the 21th century by developing delegates' skills to negotiate, collaborate, plan and eventually achieve.
           </p>
 
           <div class="row text-center">
@@ -340,49 +376,47 @@
     </div>
 
     <!--NCPA Director's Message-->
-    <div class="container-fluid color-block white">
+    <div class="container-fluid color-block grey lighten-3">
       <!--Vision subcontainer-->
       <div class="container pt-3">
         <!--About Section-->
-        <section id="vision" class="section pt-2 pb-5">
+        <section id="munDirectorMessage" class="section pt-2 pb-5">
 
           <!--Heading-->
-          <h1 class="text-center text-uppercase font-weight-bold mt-5 mb-3 wow fadeIn"
-              data-wow-delay="0.2s">Our Vision</h1>
+          <h1 class="text-center text-uppercase font-weight-bold mt-5 mb-3 mb-5 pb-4 wow fadeIn"
+              data-wow-delay="0.2s">MUN Director's Message</h1>
 
           <!--Content-->
-          <p class="aboutText mb-4 text-justify">
-            In SCMUN VIII, we aim to foster compassionate leadership that are prepared for the changing 21th century by developing delegates' skills to negotiate, collaborate, plan and eventually achieve.
-          </p>
+          <img class="z-depth-2 mr-5 mb-4" src="assets/photos/teachers/Coolper.jpg" alt="" style="float: left; max-width: 218px;">
 
-          <div class="row text-center">
-            <!--Negotiators-->
-            <div class="col-lg-3 col-md-6 mb-1 mt-1 wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.4s;">
-              <i class="far fa-comments fa-4x mb-4"></i>
-              <h5 class="font-weight-bold mb-4"><span class="red-text">N</span>egotiators</h5>
-              <p class="grey-text">Negotiators are able to draw conclusions after thoughtful evaluation, address complex issues and resolve conflicts, and flexibly adjust to new situations.</p>
-            </div>
-
-            <!--Collaborators-->
-            <div class="col-lg-3 col-md-6 mb-1 mt-1 wow fadeIn" data-wow-delay="1.0s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.4s;">
-              <i class="far fa-users fa-4x mb-4"></i>
-              <h5 class="font-weight-bold mb-4"><span class="orange-text">C</span>ollaborators</h5>
-              <p class="grey-text">Collaborators are capable of asking questions to improve critical and creative thinking, considering diverse points of view, and learning from observation.</p>
-            </div>
-
-            <!--Planners-->
-            <div class="col-lg-3 col-md-6 mb-1 mt-1 wow fadeIn" data-wow-delay="1.6s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.4s;">
-              <i class="far fa-calendar-alt fa-4x mb-4"></i>
-              <h5 class="font-weight-bold mb-4"><span class="orange-text">P</span>lanners</h5>
-              <p class="grey-text">Planners are the ones who construct systems to organise information and ideas, who acquire habits to evaluate and improve, and who resourcefully persist when encountering obstacles.</p>
-            </div>
-
-            <!--Achievers-->
-            <div class="col-lg-3 col-md-6 mb-1 mt-1 wow fadeIn" data-wow-delay="2.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.4s;">
-              <i class="far fa-medal fa-4x mb-4"></i>
-              <h5 class="font-weight-bold mb-4"><span class="orange-text">A</span>chievers</h5>
-              <p class="grey-text">Achievers are able to listen, read, and communicate effectively to interpret information, conduct research conscientiously and with integrity, and demonstrate mastery of strategies and skills in academic and social contexts.</p>
-            </div>
+          <div style="text-align: left;">
+            <p class="text-justify">
+              Hello everyone!
+            </p>
+            <p class="text-justify">
+              I sincerely appreciate you being a part of this year's SCMUN. This year's SCMUN is brought to you by some of the most amazing and passionate individuals. Everything you see has come solely from the hard work of the SCMUN leadership team which is one hundred percent student-led.
+            </p>
+            <p class="text-justify">
+              I believe that Model United Nations is a necessity in our world. Peace has never been easy and while at times it seems as though that it is nonexistent, it truly is closer than it has ever been in human history. Because of people like you, solutions are being created, changes are being made, and with each new conversation that is had, justice is even closer to billions than ever before. You are gathered here because you believe in something far greater than yourself. You believe that by coming together and discussing differences with each other, you can create an environment that ensures justice for all.
+            </p>
+            <p class="text-justify">
+              While it seems that every MUN conference is simply "talking", and "negotiating", and "waiting for two days to end", you must understand that these are the same thoughts of our world leaders. They meet together and put a smile on their face and shake hands, and "talk" and "negotiate" and then at the end of the two days, leave. At that end, they have two choices, they can choose to make a change, or they can let it be a fleeting memory. I urge you, take this conference and every conference as an opportunity to grow, and make a choice with what you have done.
+            </p>
+            <p class="text-justify">
+              As my favourite political figure of all time once said, "If civilization is to survive, we must cultivate the science of human relationship-the ability of all peoples, of all kinds, to live together, in the same world at peace."
+            </p>
+            <p class="text-justify">
+              Sincerely,
+            </p>
+            <p class="text-justify font-weight-bolder mb-1">
+              Nathaniel Cooper
+            </p>
+            <p class="text-justify font-weight-bolder mb-1">
+              MUN Director
+            </p>
+            <p class="text-justify font-weight-bolder font-italic">
+              Nansha College Preparatory Academy
+            </p>
           </div>
 
         </section>
