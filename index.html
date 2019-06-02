@@ -95,6 +95,11 @@
     /*  height: 35px !important;*/
     /*  padding: 0;*/
     /*}*/
+    @media (max-width: 736px) {
+      .streak.streak-md {
+        height: 500px; } }
+    .streak.streak-lg {
+      height: 650px; }
   </style>
 </head>
 <body>
@@ -595,8 +600,64 @@
       </div>
     </div>
 
+    <!--Countdown-->
+    <div class="streak streak-photo streak-md" style="background-image: url('assets/photos/conference/minimalistWorkspace.jpg');">
+      <div class="flex-center mask rgba-indigo-strong">
+        <div class="text-center white-text">
+          <h1 class="font-weight-bold mb-3 pt-4 mt-4">SCMUN VIII Conference will start on:</h1>
+          <h5 class="font-weight-bold white-text">Friday 13/12/2019 at 6:30 pm</h5>
+
+          <!--Countdown row-->
+          <div class="row mt-5 mb-5" id="countdown">
+
+            <!--Days-->
+            <div class="col-3">
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <h1 class="display-4 font-weight-bold white-text">
+                <strong id="count-days">---</strong>
+              </h1>
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <p class="font-weight-bold spacing">DAYS</p>
+            </div>
+
+            <!--Hours-->
+            <div class="col-3">
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <h1 class="display-4 font-weight-bold white-text">
+                <strong id="count-hours">--</strong>
+              </h1>
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <p class="font-weight-bold spacing">HOURS</p>
+            </div>
+
+            <!--Minutes-->
+            <div class="col-3">
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <h1 class="display-4 font-weight-bold white-text">
+                <strong id="count-minutes">--</strong>
+              </h1>
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <p class="font-weight-bold spacing">MINUTES</p>
+            </div>
+
+            <!--Seconds-->
+            <div class="col-3">
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <h1 class="display-4 font-weight-bold white-text">
+                <strong id="count-seconds">--</strong>
+              </h1>
+              <hr class="white mx-md-5 mx-sm-4 mx-3">
+              <p class="font-weight-bold spacing">SECONDS</p>
+            </div>
+
+          </div>
+          <!--Grid row-->
+        </div>
+      </div>
+    </div>
+
     <!--Registration Process-->
-    <div class="container-fluid color-block grey lighten-3">
+    <div class="container-fluid color-block white">
       <!--Registration subcontainer-->
       <div class="container pt-3">
         <!--About Section-->
@@ -641,7 +702,8 @@
     <div style="background-color: rgb(51,123,168);">
       <div class="container">
         <div class="row pt-4">
-          <p class="note note-danger black-text"><strong>Under Heavy Development:</strong> This website is still under heavy development. For any website related issue, please contact 2220056@ncpachina.org or open issue on our github repository at https://github.com/l-l-l-l-l-l-l-l-l/SCMUN2019.</p>
+          <p class="note note-danger black-text"><strong>Under Heavy Development:</strong> This website is still under heavy development. For any website related issue, please contact <span class="black-text font-weight-bolder">2220056@ncpachina.org</span> or open issue on our github repository at
+            <a class="black-text font-weight-bolder" href="https://github.com/l-l-l-l-l-l-l-l-l/SCMUN2019">https://github.com/l-l-l-l-l-l-l-l-l/SCMUN2019</a>.</p>
         </div>
         <div class="row pb-4 pt-2 d-flex align-items-center">
 
@@ -1301,6 +1363,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Animation script -->
     <script>
       new WOW().init();
 
@@ -1314,6 +1377,20 @@
         keepImg: true,
       });
     </script>
+    <!-- jQuery Countdown -->
+    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+    <!-- Countdown script -->
+    <script type="text/javascript">
+            $(document).ready(function () {
+              $('#countdown').countdown('2019/12/13 18:30:00', function (event) {
+                $('#count-days').html(event.strftime('%D'));
+                $('#count-hours').html(event.strftime('%H'));
+                $('#count-minutes').html(event.strftime('%M'));
+                $('#count-seconds').html(event.strftime('%S'));
+              });
+            });
+    </script>
+
   </div>
 </body>
 
