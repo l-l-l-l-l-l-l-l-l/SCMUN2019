@@ -9,9 +9,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="style.css" rel="stylesheet">
 
@@ -113,9 +113,26 @@
       }
     }
 
+  /*  WOW after load  */
+    .wow {
+      visibility: hidden;
+    }
+
   </style>
 </head>
 <body>
+
+  <!--------------------------->
+  <!---------Preloader--------->
+  <!--------------------------->
+  <div id="mdb-preloader" class="flex-center">
+    <div id="preloader-markup">
+      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
 
   <!------------------------>
   <!---------Header--------->
@@ -455,9 +472,9 @@
               data-wow-delay="0.2s">Committees Available</h1>
 
           <!--Content-->
-          <div class="row wow fadeIn">
+          <div class="row">
             <!--UNSC-->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.12s">
               <!--Card 1-->
               <div class="card mb-5" data-wow-delay="0.4s" style="height: 94%;">
                 <!-- Card image -->
@@ -482,7 +499,7 @@
               </div>
             </div>
             <!--DISEC-->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.04s">
               <!--Card 2-->
               <div class="card mb-5" data-wow-delay="0.4s" style="height: 94%;">
                 <!-- Card image -->
@@ -507,7 +524,7 @@
               </div>
             </div>
             <!--WHO-->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.08s">
               <!--Card 3-->
               <div class="card mb-5" data-wow-delay="0.4s" style="height: 94%;">
                 <!-- Card image -->
@@ -532,7 +549,7 @@
               </div>
             </div>
             <!--ECOSOC-->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.15s">
               <!--Card 4-->
               <div class="card mb-5" data-wow-delay="0.4s" style="height: 94%;">
                 <!-- Card image -->
@@ -557,7 +574,7 @@
               </div>
             </div>
             <!--SOCHUM-->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.02s">
               <!--Card 5-->
               <div class="card mb-5" data-wow-delay="0.4s" style="height: 94%;">
                 <!-- Card image -->
@@ -582,7 +599,7 @@
               </div>
             </div>
             <!--UNICEF-->
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="0.06s">
               <!--Card 6-->
               <div class="card mb-5" data-wow-delay="0.4s" style="height: 94%;">
                 <!-- Card image -->
@@ -617,14 +634,14 @@
     <div class="streak streak-photo streak-md" style="background-image: url('assets/photos/conference/minimalistWorkspace.jpg');">
       <div class="flex-center mask rgba-indigo-strong">
         <div class="text-center white-text">
-          <h1 class="font-weight-bold mb-3 pt-4 mt-4 wow fadeInDown">SCMUN VIII Conference will start on:</h1>
-          <h5 class="font-weight-bold white-text wow fadeIn">Friday 13/12/2019 at 6:30 pm</h5>
+          <h1 class="font-weight-bold mb-3 pt-4 mt-4 wow fadeInDown" data-wow-delay="0.2s">SCMUN VIII Conference will start on:</h1>
+          <h5 class="font-weight-bold white-text wow fadeIn" data-wow-delay="0.5s">Friday 13/12/2019 at 6:30 pm</h5>
 
           <!--Countdown row-->
           <div class="row mt-5 mb-5" id="countdown">
 
             <!--Days-->
-            <div class="col-3 wow fadeInUp">
+            <div class="col-3 wow fadeInUp" data-wow-delay="0.1s">
               <hr class="white mx-md-5 mx-sm-4 mx-3">
               <h1 class="display-4 font-weight-bold white-text">
                 <strong id="count-days">---</strong>
@@ -634,7 +651,7 @@
             </div>
 
             <!--Hours-->
-            <div class="col-3 wow fadeInUp">
+            <div class="col-3 wow fadeInUp" data-wow-delay="0.4s">
               <hr class="white mx-md-5 mx-sm-4 mx-3">
               <h1 class="display-4 font-weight-bold white-text">
                 <strong id="count-hours">--</strong>
@@ -644,7 +661,7 @@
             </div>
 
             <!--Minutes-->
-            <div class="col-3 wow fadeInUp">
+            <div class="col-3 wow fadeInUp" data-wow-delay="0.7s">
               <hr class="white mx-md-5 mx-sm-4 mx-3">
               <h1 class="display-4 font-weight-bold white-text">
                 <strong id="count-minutes">--</strong>
@@ -654,7 +671,7 @@
             </div>
 
             <!--Seconds-->
-            <div class="col-3 wow fadeInUp">
+            <div class="col-3 wow fadeInUp" data-wow-delay="1.0s">
               <hr class="white mx-md-5 mx-sm-4 mx-3">
               <h1 class="display-4 font-weight-bold white-text">
                 <strong id="count-seconds">--</strong>
