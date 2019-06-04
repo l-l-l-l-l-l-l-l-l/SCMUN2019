@@ -9,9 +9,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/mdb.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="style.css" rel="stylesheet">
 
@@ -100,6 +100,19 @@
         height: 500px; } }
     .streak.streak-lg {
       height: 650px; }
+
+  /*  Fix font size on small screen  */
+    @media (max-width: 736px) {
+      .display-4 {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.1;
+      }
+      h1, .h1 {
+        font-size: 1.6rem;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -304,7 +317,7 @@
               data-wow-delay="0.2s">NCPA Director's Message</h1>
 
           <!--Content-->
-          <img class="z-depth-2 ml-5 mb-4 wow fadeInRight" data-wow-delay="0.2s" src="assets/photos/teachers/person_Director.jpg" alt="" style="float: right">
+          <img class="z-depth-2 ml-3 mb-3 ml-sm-4 mb-sm-4 ml-md-4 mb-md-4 ml-lg-5 wow fadeInRight" data-wow-delay="0.2s" src="assets/photos/teachers/person_Director.jpg" alt="" style="float: right">
 
           <div class="wow fadeIn" data-wow-delay="0.4s">
             <p class="text-justify">
@@ -394,7 +407,7 @@
               data-wow-delay="0.2s">MUN Director's Message</h1>
 
           <!--Content-->
-          <img class="z-depth-2 mr-5 mb-4 wow fadeInLeft" data-wow-delay="0.2s" src="assets/photos/teachers/Coolper.jpg" alt="" style="float: left; max-width: 218px;">
+          <img class="z-depth-2 mr-3 mb-3 mr-sm-4 mb-sm-4 mr-md-4 mb-md-4 mr-lg-5 wow fadeInLeft" data-wow-delay="0.2s" src="assets/photos/teachers/Coolper.jpg" alt="" style="float: left; max-width: 218px;">
 
           <div class="wow fadeIn" data-wow-delay="0.4s">
             <p class="text-justify">
