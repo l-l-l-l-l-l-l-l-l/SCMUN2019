@@ -1042,6 +1042,17 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Lazy loading -->
+  <script>
+      window.addEventListener('load', function(){
+          var allimages= document.getElementsByTagName('img');
+          for (var i=0; i<allimages.length; i++) {
+              if (allimages[i].getAttribute('data-src')) {
+                  allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+              }
+          }
+      }, false)
+  </script>
 </div>
 </body>
 
