@@ -5,38 +5,50 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SCMUN VIII | Home</title>
-  <!-- Font Awesome -->
-  <link rel="icon" href="favicon.ico">
+  <title>SCMUN VIII | Managers</title>
+  <!-- Tab icon -->
+  <link rel="icon" href="assets/icons/favicon.ico">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/mdb.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="style.css" rel="stylesheet">
 
   <!--Custom CSS-->
   <style>
-    /*  Fix font size on small screen  */
-    @media (max-width: 736px) {
-      .display-4 {
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1.1;
-      }
-
-      h1, .h1 {
-        font-size: 1.6rem;
-      }
-    }
-
     /*  WOW after load  */
     .wow {
       visibility: hidden;
     }
+    /*  Navbar  */
+    .navbar {
+      background: rgba(6, 39, 82, 0.9) !important;
+    }
+    /*  Horizontal card  */
 
+    @media (min-width: 576px) {
+      .card-img-left {
+        width: 100%;
+        border-top-left-radius: calc(0.25rem - 1px) !important;
+        border-bottom-left-radius: calc(0.25rem - 1px) !important;
+        border-top-right-radius: 0 !important;
+      }
+    }
+
+    /*  Responsive display*/
+    @media (max-width: 800px) {
+      .display-4 {
+        font-size: 3rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .display-4 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -66,8 +78,8 @@
         <!--LHS-->
         <ul class="navbar-nav mr-auto">
           <!--Home Button-->
-          <li class="nav-item active">
-            <a class="nav-link" href="#home" onclick="new WOW().init();">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="http://scmun.net/#home" onclick="new WOW().init();">Home <span class="sr-only">(current)</span></a>
           </li>
           <!--Registration-->
           <li class="nav-item">
@@ -80,13 +92,13 @@
               Conference
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#home" onclick="new WOW().init();">Home</a>
-              <a class="dropdown-item" href="#about">About</a>
-              <a class="dropdown-item" href="#ncpaDirectorMessage">NCPA Director's Message</a>
-              <a class="dropdown-item" href="#vision">Our Vision</a>
-              <a class="dropdown-item" href="#munDirectorMessage">MUN Director's Message</a>
-              <a class="dropdown-item" href="#committeesAvailable">Committees Available</a>
-              <a class="dropdown-item" href="#registrationProcess">Registration Process</a>
+              <a class="dropdown-item" href="http://scmun.net/#home" onclick="new WOW().init();">Home</a>
+              <a class="dropdown-item" href="http://scmun.net/#about">About</a>
+              <a class="dropdown-item" href="http://scmun.net/#ncpaDirectorMessage">NCPA Director's Message</a>
+              <a class="dropdown-item" href="http://scmun.net/#vision">Our Vision</a>
+              <a class="dropdown-item" href="http://scmun.net/#munDirectorMessage">MUN Director's Message</a>
+              <a class="dropdown-item" href="http://scmun.net/#committeesAvailable">Committees Available</a>
+              <a class="dropdown-item" href="http://scmun.net/#registrationProcess">Registration Process</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="history.html">History</a>
               <a class="dropdown-item" href="logisticArrangements.html">Logistic Arrangements</a>
@@ -113,13 +125,13 @@
             </div>
           </li>
           <!--Team-->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                aria-expanded="false">
               SCMUN Team
             </a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="managers.html">Managers</a>
+              <a class="dropdown-item active" href="managers.html">Managers</a>
               <a class="dropdown-item" href="officers.html">Officers</a>
             </div>
           </li>
@@ -148,37 +160,321 @@
     </div>
   </nav>
 
-  <!--Intro Section -->
-  <div id="home" class="view jarallax" data-jarallax='{"speed": 0.3}'
-       style="background-image: url(assets/photos/school/CafeteriaSunriseCompressed.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-    <div class="mask rgba-black-slight">
-      <div class="container h-100 d-flex justify-content-center align-items-center">
-        <div class="row pt-5 mt-3">
-          <div class="col-md-12">
-            <div class="text-center smooth-scroll">
-              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown display-4"
-                  data-wow-delay="0.5s"><strong>Prioritising Compassionate Leadership</strong></h1>
-              <hr class="hr-light mt-4 mb-4 wow fadeInDown" data-wow-delay="0.7s" data-wow-duration="1s">
-              <h5 class="text-uppercase mb-3 white-text wow fadeInDown" data-wow-delay="0.4s"><strong
-                class="font-weight-bold">South China Model United Nations</strong></h5>
-              <h6 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.6s"><strong
-                class="font-weight-lighter" style="letter-spacing: .4px">Hosted By Nansha College Preparatory
-                Academy</strong></h6>
-              <a href="#about" class="btn btn-outline-white wow fadeInDown mx-xl-3" data-wow-delay="0.2s">Learn More</a>
-              <a href="#registrationProcess" class="btn btn-outline-white wow fadeInDown mx-xl-3" data-wow-delay="0.4s">Register</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </header>
 
 <!-------------------------------->
 <!----------Page Content---------->
 <!-------------------------------->
-<main>
+<main class="pt-5 grey lighten-5">
+  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4">
+    <div class="container pt-3">
+      <section class="section pt-2 pb-5">
 
+        <!--Heading-->
+        <h1 class="display-4 text-center text-uppercase font-weight-bold mt-3 mt-sm-4 mt-lg-5 mb-2 mb-sm-3 mb-md-5 wow fadeInDown"
+            data-wow-delay="0.2s">SCMUN Managers</h1>
+
+        <!--Content-->
+        <p class="wow fadeInDown">In The management group members are people who manage the SCMUN conference as a whole, including but not limited to: directing the schedule, designing the website, filming the welcoming video, holding the official e-mail and managing the faculties.
+        </p>
+
+        <div class="wow fadeIn" data-wow-delay="0.6s">
+
+          <h1 class="h1-responsive mt-4 font-weight-bolder">Administrations</h1>
+
+          <div class="row">
+            <!--Card 1-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/YaoWilson.jpg" class="card-img-top card-img-left" alt="Wilson Yao">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Wilson Yao</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Secretary General</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20wyao@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 2-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/ChanAmy.jpg" class="card-img-top card-img-left" alt="Amy Chan">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Amy Chan</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Deputy Secretary General</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>2210007@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="h1-responsive mt-4 font-weight-bolder">Logistics Branch</h1>
+
+          <div class="row">
+            <!--Card 3-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/LuoLorraine.jpg" class="card-img-top card-img-left" alt="Lorraine Luo">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Lorraine Luo</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Chief of Stuff</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20lluo@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 4-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/MengJohnny.jpg" class="card-img-top card-img-left" alt="Johnny Meng">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Johnny Meng</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Deputy Chief of Stuff</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>21jmeng@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 5-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/LinOlivia.jpg" class="card-img-top card-img-left" alt="Olivia Lin">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Olivia Lin</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Treasurer</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20olin@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 6-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/LiElena.jpg" class="card-img-top card-img-left" alt="Elena Li">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Elena Li</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Deputy Treasurer</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>22eli@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 7-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/LiAnna.jpg" class="card-img-top card-img-left" alt="Anna Li">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Anna Li</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Head of Admins</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>2200003@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 8-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/ShiVitas.jpg" class="card-img-top card-img-left" alt="Vitas Shi">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Vitas Shi</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Deputy Head of Admins</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20vshi@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <h1 class="h1-responsive mt-4 font-weight-bolder">Academics Branch</h1>
+
+          <div class="row">
+
+            <!--Card 9-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/SunOwen.jpg" class="card-img-top card-img-left" alt="Owen Sun">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Owen Sun</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Head of Chairs</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20osun@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 10-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/HuangSnow.jpg" class="card-img-top card-img-left" alt="Snow Huang">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Snow Huang</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Co-Head of Chairs (Training)</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20shuang@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 11-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/LiuLouis.jpg" class="card-img-top card-img-left" alt="Louis Liu YanCi">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Louis Liu YanCi</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Co-Head of Chairs (Profiling)</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20lliu@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 12-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/WuChristal.png" class="card-img-top card-img-left" alt="Christal Wu">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Christal Wu</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Deputy Head of Chairs</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>22cwu@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Card 13-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/ChenAlisa.jpg" class="card-img-top card-img-left" alt="Alisa Chen">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Alisa Chen</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Deputy Head of Chairs</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>20achen@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <h1 class="h1-responsive mt-4 font-weight-bolder">Press Team</h1>
+
+          <div class="row">
+
+            <!--Card 14-->
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-3" style="">
+              <div class="card hoverable">
+                <div class="row no-gutters">
+                  <div class="col-sm-5">
+                    <img src="assets/photos/students/compressed/ChanAmy.jpg" class="card-img-top card-img-left" alt="Amy Chan">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title">Amy Chan</h5>
+                      <p class="card-text font-weight-bolder text-uppercase">Press Officer</p>
+                      <hr class="my-4">
+                      <p class="card-text"><i class="fal fa-envelope mr-2"></i>2210007@ncpachina.org</p>
+                      <p class="card-text font-weight-light">Nansha College Preparatory Academy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+  </div>
 </main>
 
 <!-------------------------->
@@ -986,10 +1282,10 @@
         <h6 class="text-uppercase font-weight-bold">Conference</h6>
         <hr class="info-color-dark accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="#home" class="font-weight-bold">Home</a>
+          <a href="http://scmun.net/#home" class="font-weight-bold">Home</a>
         </p>
         <p>
-          <a href="#about">About</a>
+          <a href="http://scmun.net/#about">About</a>
         </p>
         <p>
           <a href="registration.html">Register</a>
