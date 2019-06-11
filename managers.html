@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>404 Error - SCMUN</title>
+  <title>SCMUN VIII | Home</title>
   <!-- Font Awesome -->
   <link rel="icon" href="favicon.ico">
   <!-- Font Awesome -->
@@ -14,13 +14,29 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
-  <!-- Style -->
-  <style type="text/css">
-    .navbar:not(.top-nav-collapse) {
-      background: rgba(6, 39, 82, 0.9) !important;
+  <!-- Your custom styles (optional) -->
+  <link href="style.css" rel="stylesheet">
+
+  <!--Custom CSS-->
+  <style>
+    /*  Fix font size on small screen  */
+    @media (max-width: 736px) {
+      .display-4 {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.1;
+      }
+
+      h1, .h1 {
+        font-size: 1.6rem;
+      }
     }
+
+    /*  WOW after load  */
+    .wow {
+      visibility: hidden;
+    }
+
   </style>
 </head>
 <body>
@@ -31,7 +47,7 @@
 <header>
 
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <div class="container-fluid px-xl-5 px-lg-3">
       <!--Navbar structure-->
       <a class="navbar-brand" href="#">
@@ -132,20 +148,37 @@
     </div>
   </nav>
 
+  <!--Intro Section -->
+  <div id="home" class="view jarallax" data-jarallax='{"speed": 0.3}'
+       style="background-image: url(assets/photos/school/CafeteriaSunriseCompressed.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="mask rgba-black-slight">
+      <div class="container h-100 d-flex justify-content-center align-items-center">
+        <div class="row pt-5 mt-3">
+          <div class="col-md-12">
+            <div class="text-center smooth-scroll">
+              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown display-4"
+                  data-wow-delay="0.5s"><strong>Prioritising Compassionate Leadership</strong></h1>
+              <hr class="hr-light mt-4 mb-4 wow fadeInDown" data-wow-delay="0.7s" data-wow-duration="1s">
+              <h5 class="text-uppercase mb-3 white-text wow fadeInDown" data-wow-delay="0.4s"><strong
+                class="font-weight-bold">South China Model United Nations</strong></h5>
+              <h6 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.6s"><strong
+                class="font-weight-lighter" style="letter-spacing: .4px">Hosted By Nansha College Preparatory
+                Academy</strong></h6>
+              <a href="#about" class="btn btn-outline-white wow fadeInDown mx-xl-3" data-wow-delay="0.2s">Learn More</a>
+              <a href="#registrationProcess" class="btn btn-outline-white wow fadeInDown mx-xl-3" data-wow-delay="0.4s">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
 <!-------------------------------->
 <!----------Page Content---------->
 <!-------------------------------->
 <main>
-  <div class="container my-md-5 py-md-5 px-5">
-    <p class="display-1 font-weight-bolder indigo-text pb-4 pt-5 mt-5" style="font-family: 'Arimo', sans-serif;">:-(</p>
-    <p class="h1-responsive font-weight-bolder">Something went wrong</p>
-    <p class="h4-responsive font-weight-bolder text-muted font-weight-light mb-3">The URL you requested cannot be found
-      on our server, try navigating to existing pages using the navigation bar or going back to the home page using the
-      button below.</p>
-    <a href="http://scmun.net/" class="btn btn-outline-indigo waves-effect ml-0 mb-5">Home</a>
-  </div>
+
 </main>
 
 <!-------------------------->
@@ -155,7 +188,14 @@
   <!--Footer top-->
   <div class="light-blue darken-3">
     <div class="container">
-      <div class="row pb-4 pt-4 d-flex align-items-center">
+      <div class="row pt-4">
+        <p class="note note-danger black-text"><strong>Under Heavy Development:</strong> This website is still under
+          heavy development. For any website related issue, please contact <span class="black-text font-weight-bolder">2220056@ncpachina.org</span>
+          or open issue on our github repository at
+          <a class="black-text font-weight-bolder" href="https://github.com/l-l-l-l-l-l-l-l-l/SCMUN2019">https://github.com/l-l-l-l-l-l-l-l-l/SCMUN2019</a>.
+        </p>
+      </div>
+      <div class="row pb-4 pt-2 d-flex align-items-center">
 
         <!-- Grid column -->
         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
@@ -1044,6 +1084,10 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Animation script -->
+  <script>
+      new WOW().init();
+  </script>
 </div>
 </body>
 
