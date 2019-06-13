@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SCMUN VIII | Registration</title>
+  <title>SCMUN VIII | Logistic Arrangements</title>
   <!-- Tab icon -->
   <link rel="icon" href="assets/icons/favicon.ico">
   <!-- Font Awesome -->
@@ -13,7 +13,7 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/mdb.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="style.css" rel="stylesheet">
 
@@ -30,18 +30,8 @@
     #current {
       background-color: #e0e0e0;
     }
-    /*  Horizontal card  */
 
-    @media (min-width: 576px) {
-      .card-img-left {
-        width: 100%;
-        border-top-left-radius: calc(0.25rem - 1px) !important;
-        border-bottom-left-radius: calc(0.25rem - 1px) !important;
-        border-top-right-radius: 0 !important;
-      }
-    }
-
-    /*  Responsive display*/
+    /*  Responsive display  */
     @media (max-width: 991px) {
       .display-4 {
         font-size: 3.2rem;
@@ -58,24 +48,20 @@
       }
     }
 
-    /*  Pricing  */
-    .pricing-card .price .number:before {
-      content: "";
-      position: absolute;
-      font-size: 1.88rem;
-      margin-left: -1.2rem;
-      margin-top: .7rem;
+    /*  Map  */
+    .map-container{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
     }
-    .pricing-card .price .number:after {
-      content: "";
-      position: absolute;
-      font-size: 1.88rem;
-      margin-top: 3rem;
+    .map-container iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
     }
-    .price-blue-gradient {
-      background: -webkit-linear-gradient(45deg, #1652ac, #1c91fc) !important;
-      background: -o-linear-gradient(45deg, #1652ac, #1c91fc) !important;
-      background: linear-gradient(45deg, #1652ac, #1c91fc) !important; }
   </style>
 </head>
 <body>
@@ -109,11 +95,11 @@
             <a class="nav-link" href="http://scmun.net/#home" onclick="new WOW().init();">Home <span class="sr-only">(current)</span></a>
           </li>
           <!--Registration-->
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="registration.html">Register <span class="sr-only">(current)</span></a>
           </li>
           <!--Conference-->
-          <li class="nav-item dropdown smooth-scroll">
+          <li class="nav-item dropdown smooth-scroll active">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                aria-expanded="false">
               Conference
@@ -128,7 +114,7 @@
               <a class="dropdown-item" href="http://scmun.net/#registrationProcess">Registration Process</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="history.html">History</a>
-              <a class="dropdown-item" href="logisticArrangements.html">Logistic Arrangements</a>
+              <a class="dropdown-item" id="current" href="logisticArrangements.html">Logistic Arrangements</a>
               <a class="dropdown-item" href="schedule.html">Schedule</a>
               <a class="dropdown-item" href="venue.html">Venue</a>
               <a class="dropdown-item" href="awards.html">Awards Available</a>
@@ -193,27 +179,23 @@
 <!----------Page Content---------->
 <!-------------------------------->
 <main class="pt-5 grey lighten-5">
-  <!--Process-->
+  <!--Accommodation and Transportation-->
   <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 white">
     <div class="container pt-3">
       <section class="section pt-2 pb-5">
 
         <!--Heading-->
         <h1 class="display-4 text-center text-uppercase font-weight-bold mt-3 mt-sm-4 mt-lg-5 mb-2 mb-sm-3 mb-md-5 wow fadeInDown"
-            data-wow-delay="0.2s">SCMUN VIII Registration</h1>
+            data-wow-delay="0.2s">Logistic Arrangements</h1>
 
         <!--Content-->
-        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Registration Process</h1>
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">If you would like to participate in SCMUN VIII as a school or an individual delegate, please use the link below to register. For further questions, please email scmun@napchina.org. To retrieve a copy of our invitation letter, please click on the "Invitation Letter" button. After receiving your registration, we will be sending you the Registration Form II for delegate positions and logistic arrangements.
+        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Delegate Accommodation and Transportation</h1>
+        <p class="text-left wow fadeIn" data-wow-delay="0.4s">This year at SCMUN, our updated financial policies with our affiliated schools have been altered slightly. Therefore, SCMUN will not be able to book accommodations or transportation for your delegation. However, we offer several hotel recommendations in the next section.
         </p>
-        <div class="text-center mb-5 mt-4">
-          <a href="http://scmun.net/assets/documents/SCMUN%20VIII%20Invitation%20Letter.pdf" class="font-weight-bold btn peach-gradient waves-effect wow fadeIn mx-xl-3" data-wow-delay="0.4s">Invitation Letter</a>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=2T9-jRAWI0WnKJ8y1khfUrDKFbCtj61IkRajcO3M4S5UQ0k2WUhFTjlFVEhWOUg0VUk0NjlFMzlKQi4u" class="font-weight-bold btn blue-gradient wow waves-effect fadeIn mx-xl-3" data-wow-delay="0.6s">School Registration</a>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=2T9-jRAWI0WnKJ8y1khfUrDKFbCtj61IkRajcO3M4S5UQTMyQ1dZSzAxSU9aTTBQNFZSREJSTFNZMS4u" class="font-weight-bold btn blue-gradient primary-colour-dark wow waves-effect fadeIn mx-xl-3" data-wow-delay="0.8s">NCPA Student Registration</a>
-        </div>
       </section>
     </div>
   </div>
+
   <!--Fee-->
   <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 grey lighten-3">
     <div class="container pt-3">
@@ -221,82 +203,88 @@
 
         <!--Heading-->
 
-        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Conference Fee</h1>
+        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Hotel Recommendation</h1>
 
         <!--Content-->
 
-          <p class="text-left wow fadeIn" data-wow-delay="0.4s">If you would like to participate in SCMUN VIII as a school or an individual delegate, please use the link below to register. For further questions, please email scmun@napchina.org. To retrieve a copy of our invitation letter, please click on the "Invitation Letter" button. After receiving your registration, we will be sending you the Registration Form II for delegate positions and logistic arrangements.
-          </p>
-          <div class="row mt-4 mt-xl-5">
+        <!-- Hotel Accordion -->
+        <div class="mt-4 mb-2 accordion md-accordion wow fadeInUp" id="hotelAccordion" role="tablist" aria-multiselectable="true">
 
-            <!--First colomn-->
-            <div class="col-lg-4 col-md-12 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-              <div class="card pricing-card hoverable">
-                <!--Content-->
-                <div class="card-body">
-                  <h5 class="font-weight-bold mt-3" style="font-size: 1.198rem">NCPA Delegates</h5>
-                  <!-- Price -->
-                  <div class="price pt-0">
-                    <h2 class="number indigo-text mb-0">Free</h2>
-                  </div>
-                  <!--Price-->
-                  <ul class="striped darker-striped">
-                    <li>
-                      <p>Accommodation information pending</p>
-                    </li>
-                    <li>
-                      <p>Meal information pending</p>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
+          <!-- #1 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo1">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseTwo1"
+                 aria-expanded="false" aria-controls="collapseTwo1">
+                <h5 class="mb-0">
+                  Nansha Grand Hotel<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
             </div>
 
-            <!--Second column-->
-            <div class="col-lg-4 col-md-12 mb-4 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="card pricing-card price-blue-gradient text-white hoverable">
-                <!--Content-->
-                <div class="card-body">
-                  <h5 class="font-weight-bold mt-3" style="font-size: 1.198rem">Non-NCPA Delegates</h5>
-                  <!-- Price -->
-                  <div class="price pt-0">
-                    <h2 class="number white-text mb-0">¥498</h2>
+            <div id="collapseTwo1" class="collapse show" role="tabpanel" aria-labelledby="headingTwo1"
+                 data-parent="#hotelAccordion">
+
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
+
+                <div class="row">
+                  <!--First colomn-->
+                  <div class="col-lg-6 col-12">
+                    <h1 class="black-text h1-responsive font-weight-bold">Nansha Grand Hotel</h1>
+                    <h3 class="black-text h3-responsive">南沙大酒店</h3>
+                    <p class="text-muted font-weight-light">No.1 Shangmao Road New Coastal City, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511458</p>
+                    <hr>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥800/room/night</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 0.4km</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 3min</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://nansha-hotel.com">www.nansha-hotel.com/
+                    </a></p>
                   </div>
-                  <!--Price-->
-                  <ul class="striped">
-                    <li>
-                      <p>Accommodation information pending</p>
-                    </li>
-                    <li>
-                      <p>Meal information pending</p>
-                    </li>
-                  </ul>
+
+                  <!--Second colomn-->
+                  <div class="col-lg-6 col-12">
+                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/Nansha%20Grand%20Hotel.jpg" alt="">
+                  </div>
                 </div>
+
               </div>
             </div>
+          </div>
 
-            <!--Third column-->
-            <div class="col-lg-4 col-md-12 mb-4 wow fadeInUp" data-wow-delay="0.8s">
-              <div class="card pricing-card hoverable">
+          <!-- #2 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo2">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseTwo21"
+                 aria-expanded="false" aria-controls="collapseTwo21">
+                <h5 class="mb-0">
+                  LN Garden Hotel Guangzhou Nansha<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
 
-                <!--Content-->
-                <div class="card-body">
-                  <h5 class="font-weight-bold mt-3" style="font-size: 1.198rem">Staffs, Officers and Faculties</h5>
+            <div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"
+                 data-parent="#hotelAccordion">
 
-                  <!-- Price -->
-                  <div class="price pt-0">
-                    <h2 class="number indigo-text mb-0">Free</h2>
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
+
+                <div class="row">
+                  <!--First colomn-->
+                  <div class="col-lg-6 col-12">
+                    <h1 class="black-text h1-responsive font-weight-bold">LN Garden Hotel Guangzhou Nansha</h1>
+                    <h3 class="black-text h3-responsive">南沙花园酒店</h3>
+                    <p class="text-muted font-weight-light">Nansha Coastal Park, Nansha District, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511458</p>
+                    <hr>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥900/room/night</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 1.8km</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 9min</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://www.gardenhotelnansha.cn/">www.gardenhotelnansha.cn</a></p>
                   </div>
-                  <!--Price-->
-                  <ul class="striped darker-striped">
-                    <li>
-                      <p>Accommodation information pending</p>
-                    </li>
-                    <li>
-                      <p>Meal information pending</p>
-                    </li>
-                  </ul>
+
+                  <!--Second colomn-->
+                  <div class="col-lg-6 col-12">
+                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/LN%20Garden%20Hotel%20Guangzhou%20Nansha.jpeg" alt="">
+                  </div>
                 </div>
 
               </div>
@@ -304,24 +292,116 @@
 
           </div>
 
+          <!-- #3 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingThree31">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseThree31"
+                 aria-expanded="false" aria-controls="collapseThree31">
+                <h5 class="mb-0">
+                  Sheraton Guangzhou Nansha Hotel<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"
+                 data-parent="#hotelAccordion">
+
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
+
+                <div class="row">
+                  <!--First colomn-->
+                  <div class="col-lg-6 col-12">
+                    <h1 class="black-text h1-responsive font-weight-bold">Sheraton Guangzhou Nansha Hotel</h1>
+                    <h3 class="black-text h3-responsive">广州南沙越秀喜来登酒店</h3>
+                    <p class="text-muted font-weight-light">No 79-80 Haixi Street Haibin Road, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511458</p>
+                    <hr>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥1000/room/night</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 11km</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 20min</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://www.sheratonnansha.cn/">www.sheratonnansha.cn
+                    </a></p>
+                  </div>
+
+                  <!--Second colomn-->
+                  <div class="col-lg-6 col-12">
+                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/Sheraton%20Guangzhou%20Nansha%20Hotel.jpg" alt="">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- #4 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingFour41">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseFour41"
+                 aria-expanded="false" aria-controls="collapseFour41">
+                <h5 class="mb-0">
+                  Guangzhou Nansha Pearl River Delta World Trade Center Tower<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <div id="collapseFour41" class="collapse" role="tabpanel" aria-labelledby="headingFour41"
+                 data-parent="#hotelAccordion">
+
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
+
+                <div class="row">
+                  <!--First colomn-->
+                  <div class="col-lg-6 col-12">
+                    <h1 class="black-text h1-responsive font-weight-bold">Guangzhou Nansha Pearl River Delta World Trade Center Tower</h1>
+                    <h3 class="black-text h3-responsive">广州南沙珠江三角洲世贸中心大厦</h3>
+                    <p class="text-muted font-weight-light">No 156 Gangqian S Ave, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511462</p>
+                    <hr>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥400/room/night</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 1.1km</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 4min</p>
+                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://en.trade-center.cn/">en.trade-center.cn
+                    </a></p>
+                  </div>
+
+                  <!--Second colomn-->
+                  <div class="col-lg-6 col-12">
+                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/Guangzhou%20Nansha%20World%20Trade%20Center%20Building%20Pearl%20River%20Delta.jpg" alt="">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Note -->
+          <p class="mt-4 text-muted mx-4">*Hotel fees listed on this page is for reference only as price might have been altered, please refer to the hotel's website for extra information.</p>
+
+        </div>
+
       </section>
     </div>
   </div>
-  <!--Logistic-->
+
+  <!--Location-->
   <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 color-block white">
     <div class="container pt-3">
       <section class="section pt-2 pb-5">
 
         <!--Heading-->
 
-        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Logistic Arrangements</h1>
+        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">School Location</h1>
 
         <!--Content-->
+        <!--Google Map-->
+        <div id="map-container-google-1" class="z-depth-1-half map-container my-4" style="height: 500px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.654159936181!2d113.61124180947095!3d22.763929346032274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403b99ae274f429%3A0x1b4a4064f506f544!2sGuangzhou+Yingdong+Middle+School!5e0!3m2!1sen!2sus!4v1541612181342" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!--Bing Map-->
+        <p class="mt-4 text-muted mx-4">*If Google Map does not work for you, you can click <a  data-toggle="collapse" href="#BingMap" role="button" aria-expanded="false" aria-controls="BingMap">here</a> to see our location on Bing Map.</p>
 
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">This year at SCMUN, our updated financial policies with our affiliated schools have been altered slightly. Therefore, SCMUN will not be able to book accommodations or transport for your delegation. However, you can see some of the recommendations we offer by clicking the button below. You will also find our school location in this page.
-        </p>
-        <div class="text-center mb-5">
-          <a href="logisticArrangements.html" class="font-weight-bold btn btn-outline-dark-green waves-effect wow fadeInUp mx-xl-3" data-wow-delay="0.4s">Logistic Arrangements</a>
+        <div class="text-center">
+          <iframe id="BingMap" class="collapse multi-collapse z-depth-1-half my-4" width="500" height="500" src="https://cn.bing.com/maps/embed?h=500&w=500&cp=22.76190388819124~113.61199694051847&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
       </section>
