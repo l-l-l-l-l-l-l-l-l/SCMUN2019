@@ -8,10 +8,7 @@
   <title>Internal Portal - SCMUN VIII</title>
   <!-- Varification -->
   <script>
-      var url_string = window.location.href
-      var url = new URL(url_string);
-      var code = url.searchParams.get("code");
-      console.log(code);
+      var url = window.location.href;
 
       function SHA256(s) {
 
@@ -316,7 +313,7 @@
 
       }
 
-      if (SHA256(code) !== "c6a53013d7f102d0e413ece56367661b6a6f0df59585ff17b44840c6b1aa70a6") {
+      if (SHA256(url) !== "596e6e28b480dd9d8e76c83fad6420bbf4ee83298d687f5748cd4766c9344f83") {
           window.location.replace("index.html");
       }
 
@@ -347,35 +344,48 @@
     }
 
     /*  Responsive display  */
-    @media (max-width: 991px) {
+    @media (min-width: 991px) {
       .display-4 {
         font-size: 3.2rem;
       }
     }
+    @media (max-width: 991px) {
+      .display-4 {
+        font-size: 3.0rem;
+      }
+    }
     @media (max-width: 767px) {
       .display-4 {
-        font-size: 2.4rem;
+        font-size: 2.0rem;
       }
     }
     @media (max-width: 600px) {
       .display-4 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
 
-    /*  Map  */
-    .map-container{
-      overflow:hidden;
-      padding-bottom:56.25%;
-      position:relative;
-      height:0;
+    /*  Scrollspy  */
+    #mdb-scrollspy-ex .nav-item {
+      width: 100%;
     }
-    .map-container iframe{
-      left:0;
-      top:0;
-      height:100%;
-      width:100%;
-      position:absolute;
+
+    #mdb-scrollspy-ex a {
+      font-size: .8rem;
+      font-weight: 400;
+      line-height: 1.1rem;
+      padding: 0 5px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      color: black;
+    }
+
+    #mdb-scrollspy-ex li .active {
+      font-weight: 600;
+    }
+
+    .mdb-scrollspy-ex-example {
+      height: 200px;
     }
   </style>
 </head>
@@ -491,234 +501,126 @@
 <!-------------------------------->
 <!----------Page Content---------->
 <!-------------------------------->
-<!--<main class="pt-5 grey lighten-5">-->
-<!--  &lt;!&ndash;Accommodation and Transportation&ndash;&gt;-->
-<!--  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 white">-->
-<!--    <div class="container pt-3">-->
-<!--      <section class="section pt-2 pb-5">-->
+<main class="pt-5 grey lighten-5">
+  <!--Intro-->
+  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 white">
+    <div class="container pt-3">
+      <section class="section pt-2 pb-3">
 
-<!--        &lt;!&ndash;Heading&ndash;&gt;-->
-<!--        <h1 class="display-4 text-center text-uppercase font-weight-bold mt-3 mt-sm-4 mt-lg-5 mb-2 mb-sm-3 mb-md-5 wow fadeInDown"-->
-<!--            data-wow-delay="0.2s">SCMUN VIII Internal Portal</h1>-->
+        <!--Heading-->
+        <h1 class="display-4 text-center text-uppercase font-weight-bold mt-3 mt-sm-4 mt-lg-5 mb-2 mb-sm-3 mb-md-5 wow fadeInDown"
+            data-wow-delay="0.2s">SCMUN VIII Internal Portal</h1>
 
 <!--        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Delegate Accommodation and Transportation</h1>-->
 
-<!--        &lt;!&ndash;Content&ndash;&gt;-->
-<!--        <p class="text-left wow fadeIn" data-wow-delay="0.4s">This year at SCMUN, our updated financial policies with our affiliated schools have been altered slightly. Therefore, SCMUN will not be able to book accommodations or transportation for your delegation. However, we offer several hotel recommendations in the next section.-->
-<!--        </p>-->
-<!--      </section>-->
-<!--    </div>-->
-<!--  </div>-->
+        <!--Content-->
+        <p class="text-left wow fadeIn text-center" data-wow-delay="0.4s">This page provides quick access to resources such as internal documents.
+        </p>
 
-<!--  &lt;!&ndash;Fee&ndash;&gt;-->
-<!--  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 grey lighten-3">-->
-<!--    <div class="container pt-3">-->
-<!--      <section class="section pt-2 pb-5">-->
+      </section>
+    </div>
+  </div>
 
-<!--        &lt;!&ndash;Heading&ndash;&gt;-->
+  <!--Content-->
+  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 grey lighten-3">
+    <div class="container pt-3">
+      <section class="section pt-2 pb-5">
+
+        <!--Heading-->
 
 <!--        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Hotel Recommendation</h1>-->
 
-<!--        &lt;!&ndash;Content&ndash;&gt;-->
+        <!--Content-->
 
-<!--        &lt;!&ndash; Hotel Accordion &ndash;&gt;-->
-<!--        <div class="mt-4 mb-2 accordion md-accordion wow fadeInUp" id="hotelAccordion" role="tablist" aria-multiselectable="true">-->
+        <!-- Accordion -->
+        <div class="mt-4 mb-2 accordion md-accordion wow fadeInUp" id="hotelAccordion" role="tablist" aria-multiselectable="true">
 
-<!--          &lt;!&ndash; #1 &ndash;&gt;-->
-<!--          <div class="card">-->
-<!--            <div class="card-header" role="tab" id="headingTwo1">-->
-<!--              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseTwo1"-->
-<!--                 aria-expanded="false" aria-controls="collapseTwo1">-->
-<!--                <h5 class="mb-0">-->
-<!--                  Nansha Grand Hotel<i class="fas fa-angle-down rotate-icon"></i>-->
-<!--                </h5>-->
-<!--              </a>-->
-<!--            </div>-->
+          <!-- #1 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo1">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseTwo1"
+                 aria-expanded="false" aria-controls="collapseTwo1">
+                <h5 class="mb-0">
+                  For Chairs<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
 
-<!--            <div id="collapseTwo1" class="collapse show" role="tabpanel" aria-labelledby="headingTwo1"-->
-<!--                 data-parent="#hotelAccordion">-->
+            <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
+                 data-parent="#hotelAccordion">
 
-<!--              &lt;!&ndash;Content inside&ndash;&gt;-->
-<!--              <div class="card-body px-lg-5 px-4">-->
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
+                <h2 class="black-text h2-responsive mb-2">Uploading Committee Documents</h2>
+                <p class="black-text font-weight-bolder mb-1">To promote sustainabililty, you can upload your committee's working papers, draft resolutions, as well as final resolution onto SCMUN's website by emailing it to <strong>2220056@ncpachina.org</strong> with the following naming scheme in pdf format:</p>
+                <samp class="">COMMITTEE_topicNumber_documentType_documentNumber.pdf</samp>
+                <p class="black-text font-weight-bolder mt-2 mb-1">For example:</p>
+                <samp class="">UNSC_topic1_draftResolution_1.1.pdf</samp>
 
-<!--                <div class="row">-->
-<!--                  &lt;!&ndash;First colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <h1 class="black-text h1-responsive font-weight-bold">Nansha Grand Hotel</h1>-->
-<!--                    <h3 class="black-text h3-responsive">南沙大酒店</h3>-->
-<!--                    <p class="text-muted font-weight-light">No.1 Shangmao Road New Coastal City, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511458</p>-->
-<!--                    <hr>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥800/room/night</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 0.4km</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 3min</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://nansha-hotel.com">www.nansha-hotel.com/-->
-<!--                    </a></p>-->
-<!--                  </div>-->
+                <h2 class="black-text h2-responsive mb-2 mt-4">Shared Statistics</h2>
 
-<!--                  &lt;!&ndash;Second colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/Nansha%20Grand%20Hotel.jpg" alt="">-->
-<!--                  </div>-->
-<!--                </div>-->
 
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
+              </div>
+            </div>
+          </div>
 
-<!--          &lt;!&ndash; #2 &ndash;&gt;-->
-<!--          <div class="card">-->
-<!--            <div class="card-header" role="tab" id="headingTwo2">-->
-<!--              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseTwo21"-->
-<!--                 aria-expanded="false" aria-controls="collapseTwo21">-->
-<!--                <h5 class="mb-0">-->
-<!--                  LN Garden Hotel Guangzhou Nansha<i class="fas fa-angle-down rotate-icon"></i>-->
-<!--                </h5>-->
-<!--              </a>-->
-<!--            </div>-->
+          <!-- #2 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo2">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseTwo21"
+                 aria-expanded="false" aria-controls="collapseTwo21">
+                <h5 class="mb-0">
+                  For Promotion Department<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
 
-<!--            <div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"-->
-<!--                 data-parent="#hotelAccordion">-->
+            <div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"
+                 data-parent="#hotelAccordion">
 
-<!--              &lt;!&ndash;Content inside&ndash;&gt;-->
-<!--              <div class="card-body px-lg-5 px-4">-->
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
+                <h2 class="black-text h2-responsive mb-2">Press Standardisation</h2>
+                <p class="black-text font-weight-bolder mb-1">This document is written to establish a standardisation scheme designed to put SCMUN designs, symbols and products to a uniform manner.</p>
+                <p class=""><a href="assets/documents/SCMUN Standardisation.docx">
+                  <i class="fal fa-file-word m-2 fa-6x indigo-text"></i>
+                </a></p>
 
-<!--                <div class="row">-->
-<!--                  &lt;!&ndash;First colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <h1 class="black-text h1-responsive font-weight-bold">LN Garden Hotel Guangzhou Nansha</h1>-->
-<!--                    <h3 class="black-text h3-responsive">南沙花园酒店</h3>-->
-<!--                    <p class="text-muted font-weight-light">Nansha Coastal Park, Nansha District, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511458</p>-->
-<!--                    <hr>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥900/room/night</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 1.8km</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 9min</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://www.gardenhotelnansha.cn/">www.gardenhotelnansha.cn</a></p>-->
-<!--                  </div>-->
 
-<!--                  &lt;!&ndash;Second colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/LN%20Garden%20Hotel%20Guangzhou%20Nansha.jpeg" alt="">-->
-<!--                  </div>-->
-<!--                </div>-->
+              </div>
+            </div>
 
-<!--              </div>-->
-<!--            </div>-->
+          </div>
 
-<!--          </div>-->
+          <!-- #3 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="headingThree31">
+              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseThree31"
+                 aria-expanded="false" aria-controls="collapseThree31">
+                <h5 class="mb-0">
+                  For Admins<i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
 
-<!--          &lt;!&ndash; #3 &ndash;&gt;-->
-<!--          <div class="card">-->
-<!--            <div class="card-header" role="tab" id="headingThree31">-->
-<!--              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseThree31"-->
-<!--                 aria-expanded="false" aria-controls="collapseThree31">-->
-<!--                <h5 class="mb-0">-->
-<!--                  Sheraton Guangzhou Nansha Hotel<i class="fas fa-angle-down rotate-icon"></i>-->
-<!--                </h5>-->
-<!--              </a>-->
-<!--            </div>-->
+            <div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"
+                 data-parent="#hotelAccordion">
 
-<!--            <div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"-->
-<!--                 data-parent="#hotelAccordion">-->
+              <!--Content inside-->
+              <div class="card-body px-lg-5 px-4">
 
-<!--              &lt;!&ndash;Content inside&ndash;&gt;-->
-<!--              <div class="card-body px-lg-5 px-4">-->
+              </div>
+            </div>
+          </div>
 
-<!--                <div class="row">-->
-<!--                  &lt;!&ndash;First colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <h1 class="black-text h1-responsive font-weight-bold">Sheraton Guangzhou Nansha Hotel</h1>-->
-<!--                    <h3 class="black-text h3-responsive">广州南沙越秀喜来登酒店</h3>-->
-<!--                    <p class="text-muted font-weight-light">No 79-80 Haixi Street Haibin Road, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511458</p>-->
-<!--                    <hr>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥1000/room/night</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 11km</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 20min</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://www.sheratonnansha.cn/">www.sheratonnansha.cn-->
-<!--                    </a></p>-->
-<!--                  </div>-->
+        </div>
 
-<!--                  &lt;!&ndash;Second colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/Sheraton%20Guangzhou%20Nansha%20Hotel.jpg" alt="">-->
-<!--                  </div>-->
-<!--                </div>-->
+      </section>
+    </div>
+  </div>
 
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
 
-<!--          &lt;!&ndash; #4 &ndash;&gt;-->
-<!--          <div class="card">-->
-<!--            <div class="card-header" role="tab" id="headingFour41">-->
-<!--              <a class="collapsed" data-toggle="collapse" data-parent="#hotelAccordion" href="#collapseFour41"-->
-<!--                 aria-expanded="false" aria-controls="collapseFour41">-->
-<!--                <h5 class="mb-0">-->
-<!--                  Guangzhou Nansha Pearl River Delta World Trade Center Tower<i class="fas fa-angle-down rotate-icon"></i>-->
-<!--                </h5>-->
-<!--              </a>-->
-<!--            </div>-->
-
-<!--            <div id="collapseFour41" class="collapse" role="tabpanel" aria-labelledby="headingFour41"-->
-<!--                 data-parent="#hotelAccordion">-->
-
-<!--              &lt;!&ndash;Content inside&ndash;&gt;-->
-<!--              <div class="card-body px-lg-5 px-4">-->
-
-<!--                <div class="row">-->
-<!--                  &lt;!&ndash;First colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <h1 class="black-text h1-responsive font-weight-bold">Guangzhou Nansha Pearl River Delta World Trade Center Tower</h1>-->
-<!--                    <h3 class="black-text h3-responsive">广州南沙珠江三角洲世贸中心大厦</h3>-->
-<!--                    <p class="text-muted font-weight-light">No 156 Gangqian S Ave, Nansha Qu, Guangzhou Shi, Guangdong Sheng, China, 511462</p>-->
-<!--                    <hr>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-sack-dollar mr-2"></i>Estimated cost: ¥400/room/night</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-compass mr-2"></i>Distance from conference location: 1.1km</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-car mr-2"></i>Estimated driving time needed: 4min</p>-->
-<!--                    <p class="black-text font-weight-bolder"><i class="fas fa-spider-web mr-2"></i>Website: <a href="http://en.trade-center.cn/">en.trade-center.cn-->
-<!--                    </a></p>-->
-<!--                  </div>-->
-
-<!--                  &lt;!&ndash;Second colomn&ndash;&gt;-->
-<!--                  <div class="col-lg-6 col-12">-->
-<!--                    <img class="img-fluid z-depth-1" src="assets/photos/hotels/Guangzhou%20Nansha%20World%20Trade%20Center%20Building%20Pearl%20River%20Delta.jpg" alt="">-->
-<!--                  </div>-->
-<!--                </div>-->
-
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          &lt;!&ndash; Note &ndash;&gt;-->
-<!--          <p class="mt-4 text-muted mx-4">*Hotel fees listed on this page is for reference only as price might have been altered, please refer to the hotel's website for extra information.</p>-->
-
-<!--        </div>-->
-
-<!--      </section>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  &lt;!&ndash;Location&ndash;&gt;-->
-<!--  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 color-block white">-->
-<!--    <div class="container pt-3">-->
-<!--      <section class="section pt-2 pb-5">-->
-
-<!--        &lt;!&ndash;Heading&ndash;&gt;-->
-
-<!--        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">School Location</h1>-->
-
-<!--        &lt;!&ndash;Content&ndash;&gt;-->
-<!--        &lt;!&ndash;Google Map&ndash;&gt;-->
-<!--        <div id="map-container-google-1" class="z-depth-1-half map-container my-4" style="height: 500px">-->
-<!--          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.654159936181!2d113.61124180947095!3d22.763929346032274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403b99ae274f429%3A0x1b4a4064f506f544!2sGuangzhou+Yingdong+Middle+School!5e0!3m2!1sen!2sus!4v1541612181342" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-<!--        </div>-->
-<!--        &lt;!&ndash;Bing Map&ndash;&gt;-->
-<!--        <p class="mt-4 text-muted mx-4">*If Google Map does not work for you, you can click <a href="https://cn.bing.com/maps?osid=f7f0cb2b-031a-4f51-b196-0e27a70265cf&cp=22.764034~113.607782&lvl=16&v=2&sV=2&form=S00027">here</a> to see our location on Bing Map.</p>-->
-
-<!--      </section>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--</main>-->
+</main>
 
 <!-------------------------->
 <!----------Footer---------->
