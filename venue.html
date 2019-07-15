@@ -163,11 +163,16 @@
         <!--/LHS-->
 
         <!--RHS-->
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          </div>
-        </form>
+        <ul class="navbar-nav ml-auto">
+          <!--Internal Portal-->
+          <li class="nav-item">
+
+            <a id="navbar-static-login" class="nav-link font-weight-light font-weight-light" data-toggle="modal" data-target="#navbarLogin">Internal Portal
+              <i class="fas fa-sign-in-alt"></i>
+            </a>
+
+          </li>
+        </ul>
         <!--/RHS-->
       </div>
     </div>
@@ -256,6 +261,42 @@
   </div>
 
 </main>
+
+<!--Modal: Login / Register Form Demo-->
+<div class="modal fade" id="navbarLogin" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header text-centre">
+        <h4 class="modal-title w-100 font-weight-bold text-center">SCMUN VIII Internal Portal</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <p class="py-2">If you are part of the SCMUN management team, you can access the internal portal by typing in your access code.</p>
+
+        <div class="md-form mb-4">
+          <label for="internalPortalInput">Access code</label>
+          <input type="password" id="internalPortalInput" class="form-control" required>
+          <div class="invalid-feedback">
+            Please enter a valid access code.
+          </div>
+          <div class="valid-feedback ">
+            Welcome back!
+          </div>
+
+          <button id="internalPortalButton" class="btn btn-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Go</button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- Modal content -->
+  </div>
+</div>
+<!--Modal: Login / Register Form Demo-->
 
 <!-------------------------->
 <!----------Footer---------->
@@ -454,6 +495,9 @@
           }
       }, false)
   </script>
+
+  <!-- Main -->
+  <script type="text/javascript" src="main.js"></script>
 </div>
 </body>
 
