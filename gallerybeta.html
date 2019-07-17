@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SCMUN VIII | UNSC</title>
+  <title>SCMUN VIII | Gallery</title>
   <!-- Tab icon -->
   <link rel="icon" href="assets/icons/favicon.ico">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
@@ -48,6 +48,20 @@
       }
     }
 
+    /*  Map  */
+    .map-container{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+    }
+    .map-container iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
 
     .streak.streak-photo {
       background-repeat: no-repeat;
@@ -61,7 +75,6 @@
         background-position: center top;
       }
     }
-
   </style>
 </head>
 <body>
@@ -121,13 +134,13 @@
             </div>
           </li>
           <!--Committees-->
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                aria-expanded="false">
               Committees
             </a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" id="current" href="UNSC.html">United Nation Security Council (UNSC)</a>
+              <a class="dropdown-item" href="UNSC.html">United Nation Security Council (UNSC)</a>
               <a class="dropdown-item" href="DISEC.html">General Assembly 1 -- Disarmament & International Security
                 (DISEC)</a>
               <a class="dropdown-item" href="WHO.html">World Health Organisation (WHO)</a>
@@ -159,6 +172,10 @@
               <a class="dropdown-item" href="contact.html">Contact</a>
             </div>
           </li>
+          <!--Gallery-->
+          <li class="nav-item active">
+            <a class="nav-link" href="gallerybeta.html">Gallery (beta)<span class="sr-only"></span></a>
+          </li>
         </ul>
         <!--/LHS-->
 
@@ -186,286 +203,148 @@
 <main class="">
   <!--Title Streak-->
   <div>
-    <div class="streak streak-photo streak-md d-lg-none" style="background-image: url('assets/photos/committees/streak/UNSCs.jpg');">
+    <div class="streak streak-photo streak-md d-lg-none" style="background-image: url('assets/photos/committees/streak/gallerys.jpg');">
       <div class="flex-center mask rgba-indigo-light">
         <div class="text-center white-text mt-5">
-          <h1 class="display-4" style="font-weight: 400">United Nation Security Council (UNSC)</h1>
+          <h1 class="display-4" style="font-weight: 400">SCMUN Photo Gallery</h1>
         </div>
       </div>
     </div>
 
-    <div class="streak streak-photo streak-md d-none d-lg-block" style="background-image: url('assets/photos/committees/streak/UNSCl.jpg');">
+    <div class="streak streak-photo streak-md d-none d-lg-block" style="background-image: url('assets/photos/committees/streak/galleryl.jpg');">
       <div class="flex-center mask rgba-indigo-light">
         <div class="text-center white-text mt-5">
-          <h1 class="display-4" style="font-weight: 400">United Nation Security Council (UNSC)</h1>
+          <h1 class="display-4" style="font-weight: 400">SCMUN Photo Gallery</h1>
         </div>
       </div>
     </div>
   </div>
 
-  <!--Overview-->
-  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 white">
+  <!--Gallery 1-->
+  <div class="container-fluid white">
     <div class="container pt-3">
-      <section class="section pt-2 pb-4">
+      <section class="section pb-5">
 
-        <!--Heading-->
+        <!--Featured-->
 
-        <h1 class="h1-responsive text-left mt-3 font-weight-bolder wow fadeInDown">Committee Overview</h1>
+        <h1 class="h1-responsive text-center mt-5 mb-5 font-weight-bolder wow fadeInDown">Featured Photos</h1>
 
-        <!--Content-->
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">The United Nation Security Council was founded alongside with the United Nations itself back in 1945, it has primary responsibility for the maintenance of international peace and security. The Security Council works to eliminate threats to peace or acts of aggression. All Member States are obligated to comply with Council decisions under the UN Charter.
-        </p>
-      </section>
-    </div>
-  </div>
-
-  <!--Chairs-->
-  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 grey lighten-3">
-    <div class="container pt-3">
-      <section class="section pt-2 pb-5">
-
-        <!--Heading-->
-
-        <h1 class="h1-responsive text-left mt-3 font-weight-bolder wow fadeInDown">Committee Officers</h1>
-
-        <!--Content-->
         <div class="row">
-          <!--UNSC 1-->
-          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 my-3 px-4 px-sm-4 px-md-3 px-lg-4 px-xl-3" style="">
-            <div class="card hoverable">
-              <div class="row no-gutters">
-                <div class="col-12">
-                  <img src="assets/photos/5_4spinner.gif" data-src="assets/photos/5_4placeholder.png" class="card-img-top card-img-left" alt="Wilson Yao">
-                </div>
-                <div class="col-12">
-                  <div class="card-body">
-                    <h5 class="card-title">Pending</h5>
-                    <p class="card-text font-weight-bolder text-uppercase">Chair</p>
-                    <p class="card-text"><i class="fal fa-envelope mr-2"></i>mail@example.com</p>
-                    <p class="card-text font-weight-light">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facere laboriosam mollitia nesciunt obcaecati omnis quas quia sequi tenetur voluptate!"</p>
-                  </div>
-                </div>
-              </div>
+          <div class="col-md-12">
+
+            <div id="mdb-lightbox-ui"></div>
+
+            <div class="mdb-lightbox">
+
+              <figure class="col-md-4">
+                <a href="gallery/full/F01.jpg" data-size="6000x4000">
+                  <img src="gallery/thumbnails/F01.jpg" class="img-fluid">
+                </a>
+              </figure>
+
+              <figure class="col-md-4">
+                <a href="gallery/full/F02.jpg" data-size="6000x4000">
+                  <img src="gallery/thumbnails/F02.jpg" class="img-fluid" />
+                </a>
+              </figure>
+
+              <figure class="col-md-4">
+                <a href="gallery/full/F03.jpg" data-size="6000x4000">
+                  <img src="gallery/thumbnails/F03.jpg" class="img-fluid" />
+                </a>
+              </figure>
+
+              <figure class="col-md-4">
+                <a href="gallery/full/F04.jpg" data-size="6000x4000">
+                  <img src="gallery/thumbnails/F04.jpg" class="img-fluid" />
+                </a>
+              </figure>
+
+              <figure class="col-md-4">
+                <a href="gallery/full/F05.jpg" data-size="6000x4000">
+                  <img src="gallery/thumbnails/F05.jpg" class="img-fluid" />
+                </a>
+              </figure>
+
+              <figure class="col-md-4">
+                <a href="gallery/full/F06.jpg" data-size="6000x4000">
+                  <img src="gallery/thumbnails/F06.jpg" class="img-fluid" />
+                </a>
+              </figure>
+
+              <!--Unused-->
+
+              <figure class="col-md-4">
+                <a href="" data-size="6000x4000">
+                  <img src="" class="img-fluid" />
+                </a>
+              </figure>
+
             </div>
-          </div>
-          <!--UNSC 2-->
-          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 my-3 px-4 px-sm-4 px-md-3 px-lg-4 px-xl-3" style="">
-            <div class="card hoverable">
-              <div class="row no-gutters">
-                <div class="col-12">
-                  <img src="assets/photos/5_4spinner.gif" data-src="assets/photos/5_4placeholder.png" class="card-img-top card-img-left" alt="Wilson Yao">
-                </div>
-                <div class="col-12">
-                  <div class="card-body">
-                    <h5 class="card-title">Pending</h5>
-                    <p class="card-text font-weight-bolder text-uppercase">Chair</p>
-                    <p class="card-text"><i class="fal fa-envelope mr-2"></i>mail@example.com</p>
-                    <p class="card-text font-weight-light">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ex impedit itaque minus officiis optio repellendus saepe suscipit veniam voluptatum."</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--UNSC 3-->
-          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 my-3 px-4 px-sm-4 px-md-3 px-lg-4 px-xl-3" style="">
-            <div class="card hoverable">
-              <div class="row no-gutters">
-                <div class="col-12">
-                  <img src="assets/photos/5_4spinner.gif" data-src="assets/photos/5_4placeholder.png" class="card-img-top card-img-left" alt="Wilson Yao">
-                </div>
-                <div class="col-12">
-                  <div class="card-body">
-                    <h5 class="card-title">Pending</h5>
-                    <p class="card-text font-weight-bolder text-uppercase">Co-Chair</p>
-                    <p class="card-text"><i class="fal fa-envelope mr-2"></i>mail@example.com</p>
-                    <p class="card-text font-weight-light">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis consequuntur cumque harum inventore minus odio porro quas recusandae rem!"</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
+
       </section>
     </div>
   </div>
 
-  <!--Topics-->
-  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 white">
+  <!--About Photographer-->
+  <div class="container-fluid color-block grey lighten-3">
     <div class="container pt-3">
-      <section class="section pt-2 pb-4">
+      <section class="section pt-2 pb-5">
 
         <!--Heading-->
 
-        <h1 class="h1-responsive text-left my-3 font-weight-bolder wow fadeInDown">Topic Overview</h1>
+        <h1 class="h1-responsive text-center mt-5 mb-5 font-weight-bolder wow fadeInDown">About the Photographer</h1>
 
         <!--Content-->
 
-        <h3 class="h3-responsive text-left my-3 font-weight-bolder wow fadeInDown">Topic 1: International Security in the New Era of Terrorism</h3>
 
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate illo illum ipsam recusandae sed. Animi autem, commodi earum eveniet mollitia non quod quos. Cum dicta error, et eum exercitationem explicabo facere facilis in inventore ipsum labore laborum maiores nihil nisi omnis repellendus rerum sequi soluta veritatis voluptates! Consectetur excepturi incidunt quidem ratione temporibus voluptatum. Ad assumenda delectus deleniti eaque ex labore, odit, pariatur perferendis quae quaerat similique vel veritatis voluptatem.
-        </p>
-
-        <h3 class="h3-responsive text-left my-3 font-weight-bolder wow fadeInDown">Topic 2: Reformation in the UNSC: More Permanent Members</h3>
-
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at culpa deleniti earum facere iste iure necessitatibus nihil, nostrum quaerat temporibus velit veniam voluptates. Alias, architecto eaque earum eligendi et eveniet illo iste molestias natus nisi officiis quaerat quam qui quidem quis repellat repellendus repudiandae sint tempora voluptas? A, accusantium consectetur debitis error facilis incidunt laboriosam, maiores molestias mollitia odit omnis quas qui quod rerum, sit tempora ullam voluptates voluptatibus!
-        </p>
       </section>
     </div>
   </div>
 
-  <!--Documents-->
-  <div class="container-fluid grey lighten-3">
+  <!--Gallery 2-->
+  <div class="container-fluid white">
     <div class="container pt-3">
-      <section class="section pt-2 pb-5">
-        <!--Heading-->
-        <h1 class="h1-responsive text-left mt-3 mb-4 font-weight-bolder wow fadeInDown">Background Guides</h1>
-        <!--Background Guide-->
-        <div class="row mt-3">
+      <section class="section pb-5">
 
-                <!--Entry-->
-                <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-                  <a href="#">
-                    <div class="row text-center">
-                      <div class="col-12"><i class="fas fa-file-pdf fa-8x red-text"></i></div>
-                      <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-                    </div>
-                  </a>
-                </div>
+        <!--All-->
 
-                <!--Entry-->
-                <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-                  <a href="#">
-                    <div class="row text-center">
-                      <div class="col-12"><i class="fas fa-file-pdf fa-8x red-text"></i></div>
-                      <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-                    </div>
-                  </a>
-                </div>
+        <h1 class="h1-responsive text-center mt-5 mb-5 font-weight-bolder wow fadeInDown">All Photos</h1>
 
-        </div>
-      </section>
-    </div>
-  </div>
-  <div class="container-fluid grey lighten-4">
-    <div class="container pt-3">
-      <section class="section pt-2 pb-5">
+        <div class="row">
+          <div class="col-md-12">
 
-        <!--Heading-->
+            <div id="mdb-lightbox-ui2"></div>
 
-        <h1 class="h1-responsive text-left mt-3 mb-4 font-weight-bolder wow fadeInDown">Working Papers</h1>
+            <div class="mdb-lightbox" id="largeGallery">
 
-        <!--Background Guide-->
-        <div class="row mt-3">
+<!--              <figure class="col-md-4">-->
+<!--                <a href="gallery/full/0001.jpg" data-size="6000x4000">-->
+<!--                  <img src="gallery/thumbnails/0001.jpg" class="img-fluid">-->
+<!--                </a>-->
+<!--              </figure>-->
 
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-word fa-8x indigo-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
+<!--              <figure class="col-md-4">-->
+<!--                <a href="gallery/full/0001.jpg" data-size="6000x4000">-->
+<!--                  <img src="gallery/thumbnails/0001.jpg" class="img-fluid">-->
+<!--                </a>-->
+<!--              </figure>-->
+
+            </div>
           </div>
-
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-pdf fa-8x red-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
-          </div>
-
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-word fa-8x indigo-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
-          </div>
-
         </div>
 
-      </section>
-    </div>
-  </div>
-  <div class="container-fluid grey lighten-3">
-    <div class="container pt-3">
-      <section class="section pt-2 pb-5">
-
-        <!--Heading-->
-
-        <h1 class="h1-responsive text-left mt-3 mb-4 font-weight-bolder wow fadeInDown">Draft Resolutions</h1>
-
-        <!--Background Guide-->
-        <div class="row mt-3">
-
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-word fa-8x indigo-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
-          </div>
-
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-pdf fa-8x red-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
-          </div>
-
+        <div class="text-center">
+          <button class="font-weight-bold btn btn-outline-black primary-colour-dark waves-effect mt-4" id="loadMoreButton">Load More</button>
         </div>
 
-      </section>
-    </div>
-  </div>
-  <div class="container-fluid grey lighten-4">
-    <div class="container pt-3">
-      <section class="section pt-2 pb-5">
-
-        <!--Heading-->
-
-        <h1 class="h1-responsive text-left mt-3 mb-4 font-weight-bolder wow fadeInDown">Resolutions</h1>
-
-        <!--Background Guide-->
-        <div class="row mt-3">
-
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-word fa-8x indigo-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
-          </div>
-
-          <!--Entry-->
-          <div class="col-lg-2 col-md-3 col-4 wow fadeIn">
-            <a href="#">
-              <div class="row text-center">
-                <div class="col-12"><i class="fas fa-file-word fa-8x indigo-text"></i></div>
-                <div class="col-12 mt-3 black-text" style="font-size: 0.85rem">Example file name</div>
-              </div>
-            </a>
-          </div>
-
-        </div>
 
       </section>
     </div>
   </div>
-
-
 
 </main>
 
@@ -687,12 +566,14 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Animation script -->
+  <!-- Init -->
   <script>
       new WOW().init();
-      // object-fit polyfill run
-      objectFitImages();
 
+      // MDB Lightbox Init
+      $(function () {
+          $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
   </script>
   <!-- Lazy loading -->
   <script>
@@ -706,9 +587,12 @@
       }, false)
   </script>
 
-
   <!-- Main -->
   <script type="text/javascript" src="main.js"></script>
+  <script>
+      //First group of images
+      addGroup(amountToAdd());
+  </script>
 </div>
 </body>
 

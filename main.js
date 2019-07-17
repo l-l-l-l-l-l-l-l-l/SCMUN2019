@@ -316,3 +316,109 @@ $("#internalPortalButton").click(function (x) {
         $("#internalPortalInput").addClass("is-invalid");
     }
 });
+
+
+
+
+//-------------
+//Photo Gallery
+//-------------
+
+
+//!!!!
+const max = 179; //Largest serial goes here
+const groupMax = 9; //Amount to add each group
+//!!!!
+
+var addedPhotos = [];
+
+//Add photo with given number
+function addPhoto(i) {
+
+    var length = i.toString().length;
+
+    if(length === 1) {
+        console.log("add 000");
+        var imageSerial = "000" + i.toString()
+    }
+    else if(length === 2) {
+        console.log("add 00");
+        var imageSerial = "00" + i.toString()
+    }
+    else if(length === 3) {
+        console.log("add 0");
+        var imageSerial = "0" + i.toString()
+    }
+    else if(length === 4) {
+        console.log("add nothing");
+        var imageSerial = "" + i.toString()
+    }
+    else {
+        console.log("data length longer than 4 digits")
+    }
+
+    addedPhotos.push(i);
+    console.log(addedPhotos)
+    ;
+    console.log("output file serial is " + imageSerial);
+
+    //Generate html element
+    $("#largeGallery").append(
+        "              <figure class=\"col-md-4\">\n" +
+        "                <a href=\"gallery/full/" + imageSerial + ".jpg\" data-size=\"6000x4000\">\n" +
+        "                  <img src=\"gallery/thumbnails/" + imageSerial + ".jpg\" class=\"img-fluid\">\n" +
+        "                </a>\n" +
+        "              </figure>");
+}
+
+//Generate number between 1 and last available photo
+function getRandomInt() {
+    //Returns intiger from 0 to max - 1
+    return Math.floor(Math.random() * Math.floor(max)) + 1;
+}
+
+//Check Avalibility of generated number
+function checkAvalibility() {
+    var generated = getRandomInt();
+    if (addedPhotos.includes(generated) === false) {
+        return generated;
+    }
+    else {
+        return false;
+    }
+}
+
+//Add group of x number pf photos
+function addGroup(x) {
+    var i = 1;
+    while (i <= x) {
+        console.log("adding" + i + "th photo");
+        var generatedNumber = checkAvalibility();
+        if (generatedNumber === false) {
+
+        }
+        else {
+            addPhoto(generatedNumber);
+            i++
+        }
+    }
+}
+
+//Figure out how many to add
+function amountToAdd() {
+    if (max - addedPhotos.length >= groupMax) {
+        return groupMax
+    }
+    else {
+        console.log("no more");
+        $("#loadMoreButton").text("No More");
+        $("#loadMoreButton").prop("disabled", true);
+        return max - addedPhotos.length;
+    }
+}
+
+//Load detaction
+$("#loadMoreButton").click(function () {
+    console.log("Load More Buttom Clicked");
+    addGroup(amountToAdd());
+});
