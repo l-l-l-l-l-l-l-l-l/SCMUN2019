@@ -237,37 +237,37 @@
             <div class="mdb-lightbox">
 
               <figure class="col-md-4">
-                <a href="gallery/full/F01.jpg" data-size="6000x4000">
+                <a href="gallery/full/F01.jpg" data-size="2400x1600">
                   <img src="gallery/thumbnails/F01.jpg" class="img-fluid">
                 </a>
               </figure>
 
               <figure class="col-md-4">
-                <a href="gallery/full/F02.jpg" data-size="6000x4000">
+                <a href="gallery/full/F02.jpg" data-size="2400x1600">
                   <img src="gallery/thumbnails/F02.jpg" class="img-fluid" />
                 </a>
               </figure>
 
               <figure class="col-md-4">
-                <a href="gallery/full/F03.jpg" data-size="6000x4000">
+                <a href="gallery/full/F03.jpg" data-size="2400x1600">
                   <img src="gallery/thumbnails/F03.jpg" class="img-fluid" />
                 </a>
               </figure>
 
               <figure class="col-md-4">
-                <a href="gallery/full/F04.jpg" data-size="6000x4000">
+                <a href="gallery/full/F04.jpg" data-size="2400x1600">
                   <img src="gallery/thumbnails/F04.jpg" class="img-fluid" />
                 </a>
               </figure>
 
               <figure class="col-md-4">
-                <a href="gallery/full/F05.jpg" data-size="6000x4000">
+                <a href="gallery/full/F05.jpg" data-size="2400x1600">
                   <img src="gallery/thumbnails/F05.jpg" class="img-fluid" />
                 </a>
               </figure>
 
               <figure class="col-md-4">
-                <a href="gallery/full/F06.jpg" data-size="6000x4000">
+                <a href="gallery/full/F06.jpg" data-size="2400x1600">
                   <img src="gallery/thumbnails/F06.jpg" class="img-fluid" />
                 </a>
               </figure>
@@ -275,7 +275,7 @@
               <!--Unused-->
 
               <figure class="col-md-4">
-                <a href="" data-size="6000x4000">
+                <a href="" data-size="2400x1600">
                   <img src="" class="img-fluid" />
                 </a>
               </figure>
@@ -312,34 +312,40 @@
 
         <!--All-->
 
-        <h1 class="h1-responsive text-center mt-5 mb-5 font-weight-bolder wow fadeInDown">All Photos</h1>
+        <h1 class="h1-responsive text-center mt-5 mb-4 font-weight-bolder wow fadeInDown">All Photos</h1>
 
         <div class="row">
-          <div class="col-md-12">
 
-            <div id="mdb-lightbox-ui2"></div>
+          <!-- Filter Buttons -->
+          <div class="col-md-12 d-flex justify-content-center mb-5">
 
-            <div class="mdb-lightbox" id="largeGallery">
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="UNSC">UNSC</button>
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="DISEC">DISEC</button>
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="WHO">WHO</button>
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="ECOSOC">ECOSOC</button>
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="SOCHUM">SOCHUM</button>
+            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="UNICEF">UNICEF</button>
 
-<!--              <figure class="col-md-4">-->
-<!--                <a href="gallery/full/0001.jpg" data-size="6000x4000">-->
-<!--                  <img src="gallery/thumbnails/0001.jpg" class="img-fluid">-->
-<!--                </a>-->
-<!--              </figure>-->
-
-<!--              <figure class="col-md-4">-->
-<!--                <a href="gallery/full/0001.jpg" data-size="6000x4000">-->
-<!--                  <img src="gallery/thumbnails/0001.jpg" class="img-fluid">-->
-<!--                </a>-->
-<!--              </figure>-->
-
-            </div>
           </div>
+
         </div>
 
-        <div class="text-center">
-          <button class="font-weight-bold btn btn-outline-black primary-colour-dark waves-effect mt-4" id="loadMoreButton">Load More</button>
+        <!-- Photos -->
+        <div class="gallery mdb-lightbox row" id="largeGallery">
+
+
         </div>
+
+
+
+
+
+        <!--Lagacy load more button-->
+<!--        <div class="text-center">-->
+<!--          <button class="font-weight-bold btn btn-outline-black primary-colour-dark waves-effect mt-4" id="loadMoreButton">Load More</button>-->
+<!--        </div>-->
+
 
 
       </section>
@@ -591,7 +597,7 @@
   <script type="text/javascript" src="main.js"></script>
   <script>
       //First group of images
-      addGroup(amountToAdd());
+      loadAllPhotos();
   </script>
 </div>
 </body>

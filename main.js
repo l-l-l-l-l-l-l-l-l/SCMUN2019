@@ -330,7 +330,31 @@ $("#animationTrigger").click(function () {
 //!!!!
 const max = 179; //Largest serial goes here
 const groupMax = 9; //Amount to add each group
+var filterName = "all"; //Default filter
+
+const UNSCStart = 1;
+const UNSCEnd = 23;
+
+const DISECStart = UNSCEnd + 1;
+const DISECEnd = 56;
+
+const WHOStart = DISECEnd + 1;
+const WHOEnd = 84;
+
+const ECOSOCStart = WHOEnd + 1;
+const ECOSOCEnd = 132;
+
+const SOCHUMStart = ECOSOCEnd + 1;
+const SOCHUMEnd = 169;
+
+const UNICEFStart = SOCHUMEnd + 1;
+const UNICEFEnd = 179;
 //!!!!
+
+//Load all
+function loadAllPhotos() {
+    addGroup(max - addedPhotos.length);
+}
 
 var addedPhotos = [];
 
@@ -339,6 +363,7 @@ function addPhoto(i) {
 
     var length = i.toString().length;
 
+    //Generate Image Serial
     if(length === 1) {
         console.log("add 000");
         var imageSerial = "000" + i.toString()
@@ -359,18 +384,45 @@ function addPhoto(i) {
         console.log("data length longer than 4 digits")
     }
 
+    //Check catagory
+    if (UNSCStart <= i && i <= UNSCEnd) {
+        filterName = "UNSC";
+    }
+    else if (DISECStart <= i && i <= DISECEnd) {
+        filterName = "DISEC"
+    }
+    else if (WHOStart <= i && i <= WHOEnd) {
+        filterName = "WHO"
+    }
+    else if (ECOSOCStart <= i && i <= ECOSOCEnd) {
+        filterName = "ECOSOC"
+    }
+    else if (SOCHUMStart <= i && i <= SOCHUMEnd) {
+        filterName = "SOCHUM"
+    }
+    else if (UNICEFStart <= i && i <= UNICEFEnd) {
+        filterName = "UNICEF"
+    }
+    else {
+        console.log("Error finding catagory")
+    }
+
+
+    //Logging
     addedPhotos.push(i);
-    console.log(addedPhotos)
-    ;
+    console.log(addedPhotos);
     console.log("output file serial is " + imageSerial);
+    console.log("the photo belongs to " + filterName);
 
     //Generate html element
     $("#largeGallery").append(
-        "              <figure class=\"col-md-4\">\n" +
-        "                <a href=\"gallery/full/" + imageSerial + ".jpg\" data-size=\"6000x4000\">\n" +
-        "                  <img src=\"gallery/thumbnails/" + imageSerial + ".jpg\" class=\"img-fluid\">\n" +
-        "                </a>\n" +
-        "              </figure>");
+        "    <div class=\"col-md-4 pics animation all " + filterName + "\">\n" +
+        "        <figure class=\"\">\n" +
+        "          <a href=\"gallery/full/" + imageSerial + ".jpg\" data-size=\"2400x1600\">\n" +
+        "            <img src=\"gallery/thumbnails/" + imageSerial + ".jpg\" class=\"img-fluid\">\n" +
+        "          </a>\n" +
+        "        </figure>" +
+        "    </div>\n");
 }
 
 //Generate number between 1 and last available photo
@@ -406,7 +458,7 @@ function addGroup(x) {
     }
 }
 
-//Figure out how many to add
+//Figure out how many to add [old]
 function amountToAdd() {
     if (max - addedPhotos.length >= groupMax) {
         return groupMax
@@ -419,12 +471,26 @@ function amountToAdd() {
     }
 }
 
-//Load detaction
+//Load More detaction [old]
 $("#loadMoreButton").click(function () {
     console.log("Load More Buttom Clicked");
     addGroup(amountToAdd());
 });
 
+
+//Filter Animation
+$(function() {
+    var selectedClass = "";
+    $(".filter").click(function(){
+        selectedClass = $(this).attr("data-rel");
+        $("#largeGallery").fadeTo(100, 0);
+        $("#largeGallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+        setTimeout(function() {
+            $("."+selectedClass).fadeIn().addClass('animation');
+            $("#largeGallery").fadeTo(300, 1);
+        }, 350);
+    });
+});
 
 
 
