@@ -314,18 +314,86 @@
 
         <h1 class="h1-responsive text-center mt-5 mb-4 font-weight-bolder wow fadeInDown">All Photos</h1>
 
+        <!--Filter dropdown-->
+        <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+          <div class="card z-depth-1 mx-n2">
+
+            <div class="card-header" role="tab" id="headingTwo2">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                 aria-expanded="false" aria-controls="collapseTwo2">
+                <h5 class="mb-0">
+                  Filter <i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Content -->
+            <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                 data-parent="#accordionEx">
+              <div class="card-body">
+                <!-- Filters -->
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup1" name="groupOfMaterialRadios" data-rel="all" checked>
+                  <label class="form-check-label" for="materialGroup1">All</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup2" name="groupOfMaterialRadios" data-rel="UNSC">
+                  <label class="form-check-label" for="materialGroup2">UNSC</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup3" name="groupOfMaterialRadios" data-rel="DISEC">
+                  <label class="form-check-label" for="materialGroup3">DISEC</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup4" name="groupOfMaterialRadios" data-rel="WHO">
+                  <label class="form-check-label" for="materialGroup4">WHO</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup5" name="groupOfMaterialRadios" data-rel="ECOSOC">
+                  <label class="form-check-label" for="materialGroup5">ECOSOC</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup6" name="groupOfMaterialRadios" data-rel="SOCHUM">
+                  <label class="form-check-label" for="materialGroup6">SOCHUM</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input filter" id="materialGroup7" name="groupOfMaterialRadios" data-rel="UNICEF">
+                  <label class="form-check-label" for="materialGroup7">UNICEF</label>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- Accordion card -->
+
+        </div>
+        <!-- Accordion wrapper -->
+
+
+
+
+
+
         <div class="row">
 
           <!-- Filter Buttons -->
           <div class="col-md-12 d-flex justify-content-center mb-5">
 
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="UNSC">UNSC</button>
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="DISEC">DISEC</button>
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="WHO">WHO</button>
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="ECOSOC">ECOSOC</button>
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="SOCHUM">SOCHUM</button>
-            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="UNICEF">UNICEF</button>
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>-->
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="UNSC">UNSC</button>-->
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="DISEC">DISEC</button>-->
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="WHO">WHO</button>-->
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="ECOSOC">ECOSOC</button>-->
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="SOCHUM">SOCHUM</button>-->
+<!--            <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="UNICEF">UNICEF</button>-->
 
           </div>
 

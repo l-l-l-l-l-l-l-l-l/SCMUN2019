@@ -481,16 +481,31 @@ $("#loadMoreButton").click(function () {
 //Filter Animation
 $(function() {
     var selectedClass = "";
-    $(".filter").click(function(){
-        selectedClass = $(this).attr("data-rel");
-        $("#largeGallery").fadeTo(100, 0);
-        $("#largeGallery div").not("."+selectedClass).fadeOut().removeClass('animation');
-        setTimeout(function() {
-            $("."+selectedClass).fadeIn().addClass('animation');
-            $("#largeGallery").fadeTo(300, 1);
-        }, 350);
+    $(".filter").change(function(){
+        console.log("radio button click detected")
+        if ($(this).is(':checked')) {
+            selectedClass = $(this).attr("data-rel");
+            $("#largeGallery").fadeTo(100, 0);
+            $("#largeGallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+            setTimeout(function() {
+                $("."+selectedClass).fadeIn().addClass('animation');
+                $("#largeGallery").fadeTo(300, 1);
+            }, 350);
+        }
     });
 });
+// $(function() {
+//     var selectedClass = "";
+//     $(".filter").click(function(){
+//         selectedClass = $(this).attr("data-rel");
+//         $("#largeGallery").fadeTo(100, 0);
+//         $("#largeGallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+//         setTimeout(function() {
+//             $("."+selectedClass).fadeIn().addClass('animation');
+//             $("#largeGallery").fadeTo(300, 1);
+//         }, 350);
+//     });
+// });
 
 
 
