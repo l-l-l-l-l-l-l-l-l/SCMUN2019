@@ -328,27 +328,27 @@ $("#animationTrigger").click(function () {
 
 
 //!!!!
-const max = 179; //Largest serial goes here
-const groupMax = 9; //Amount to add each group
+const max = 179; //NO of the last photo
+// const groupMax = 9; //Amount to add each group [legacy]
 var filterName = "all"; //Default filter
 
 const UNSCStart = 1;
-const UNSCEnd = 23;
+const UNSCEnd = 23; //NO of last UNSC photo
 
 const DISECStart = UNSCEnd + 1;
-const DISECEnd = 56;
+const DISECEnd = 56; //NO of last DISEC photo
 
 const WHOStart = DISECEnd + 1;
-const WHOEnd = 84;
+const WHOEnd = 84; //NO of last WHO photo
 
 const ECOSOCStart = WHOEnd + 1;
-const ECOSOCEnd = 132;
+const ECOSOCEnd = 132; //NO of last ECOSOC photo
 
 const SOCHUMStart = ECOSOCEnd + 1;
-const SOCHUMEnd = 169;
+const SOCHUMEnd = 169; //NO of last SOCHUM photo
 
 const UNICEFStart = SOCHUMEnd + 1;
-const UNICEFEnd = 179;
+const UNICEFEnd = 179; //NO of last UNICEF photo
 //!!!!
 
 //Load all
