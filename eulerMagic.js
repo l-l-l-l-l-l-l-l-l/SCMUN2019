@@ -9,3 +9,5 @@ function eulerMagic(x0, y0, step, target) {
   }
   return y1;
 }
+
+var canvas = document.querySelector("canvas")
