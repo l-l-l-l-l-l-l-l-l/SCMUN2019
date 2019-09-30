@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>SCMUN VIII | Rules & Procedures</title>
+  <title>SCMUN VIII | Gallery</title>
   <!-- Tab icon -->
   <link rel="icon" href="assets/icons/favicon.ico">
   <!-- Font Awesome -->
@@ -48,6 +48,33 @@
       }
     }
 
+    /*  Map  */
+    .map-container{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+    }
+    .map-container iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+
+    .streak.streak-photo {
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+    }
+
+    @media (min-width: 1366px) {
+      .streak.streak-photo {
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position: center top;
+      }
+    }
   </style>
 </head>
 <body>
@@ -135,13 +162,13 @@
             </div>
           </li>
           <!--Resources-->
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                aria-expanded="false">
               Resources
             </a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" id="current" href="procedures.html">Rules and Procedures</a>
+              <a class="dropdown-item" href="procedures.html">Rules and Procedures</a>
               <a class="dropdown-item" href="contact.html">Contact</a>
             </div>
           </li>
@@ -173,67 +200,39 @@
 <!-------------------------------->
 <!----------Page Content---------->
 <!-------------------------------->
-<main class="pt-5 grey lighten-5">
-  <!--Rules and Procedures-->
-  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 white">
-    <div class="container pt-3">
-      <section class="section pt-2 pb-5">
-
-        <!--Heading-->
-        <h1 class="display-4 text-center text-uppercase font-weight-bold mt-3 mt-sm-4 mt-lg-5 mb-2 mb-sm-3 mb-md-5 wow fadeInDown"
-            data-wow-delay="0.2s">Ruels and Procedures</h1>
-
-        <img class="img-fluid z-depth-2 wow fadeIn" data-wow-delay="0.5s" src="assets/photos/conference/Pakistan_Plate.jpg" alt="">
-
-        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">Overview</h1>
-
-
-        <!--Content-->
-
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">This is the New Guidelines For Delegates, which contains basic information and regulations for SCMUN VIII. The New Guidelines For Delegates will inform the required preparation before the conference and the permissive behaviors during the conference for delegates.
-        </p>
-
-        <p class="text-left wow fadeIn" data-wow-delay="0.4s">To be more specific, The New Guidelines For Delegates will guide you, including but not limited to:
-        </p>
-
-        <ol class="text-left wow fadeIn" data-wow-delay="0.4s">
-          <li>What the Different Positions At SCMUN Are</li>
-          <li>How To Research A Country, An Issue</li>
-          <li>How To Write A Policy Statement</li>
-          <li>How To Write A Draft Resolution</li>
-          <li>How To Write An Opening Speech</li>
-          <li>How To Prepare Official Notepaper</li>
-          <li>What Is Lobbying</li>
-          <li>What Happen During Debate Time</li>
-        </ol>
-
-          <a href="assets/documents/rules.pdf" class="btn btn-lg btn-outline-danger wow fadeInLeft" data-wow-duration="0.6s"><i class="fas fa-file-pdf mr-2"></i> Download PDF</a>
-
-
-      </section>
-    </div>
-  </div>
-
-  <!--Online-->
-  <div class="container-fluid mt-2 mt-lg-3 mt-xl-4 grey lighten-3">
-    <div class="container pt-3">
-      <section class="section pb-5">
-
-        <!--Heading-->
-        <h1 class="h1-responsive text-left mt-5 font-weight-bolder wow fadeInDown">View Online</h1>
-
-
-        <!--Content-->
-
-        <div class="embed-responsive z-depth-3 wow fadeInUp mt-2" style="height: 600px;">
-          <iframe src="assets/documents/rules.pdf" height="600px" width="100%">
-          </iframe>
-
+<main class="">
+  <!--Title Streak-->
+  <div>
+    <div class="streak streak-photo streak-md d-lg-none" style="background-image: url('assets/photos/committees/streak/gallerys.jpg');">
+      <div class="flex-center mask rgba-indigo-light">
+        <div class="text-center white-text mt-5">
+          <h1 class="display-4" style="font-weight: 400">SCMUN Photo Gallery</h1>
         </div>
+      </div>
+    </div>
+
+    <div class="streak streak-photo streak-md d-none d-lg-block" style="background-image: url('assets/photos/committees/streak/galleryl.jpg');">
+      <div class="flex-center mask rgba-indigo-light">
+        <div class="text-center white-text mt-5">
+          <h1 class="display-4" style="font-weight: 400">SCMUN Photo Gallery</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Not yet-->
+  <div class="container-fluid white">
+    <div class="container px-5">
+      <section class="section" style="padding-top: 100px; padding-bottom: 100px;">
+
+        <!--Not yet-->
+
+        <h6 class="h3-responsive text-muted font-weight-light text-center mt-5 mb-5 font-weight-bolder wow fadeInDown">Photos from SCMUN VIII will be available here after the conference.</h6>
 
       </section>
     </div>
   </div>
+
 </main>
 
 <!--Modal: Login / Register Form Demo-->
@@ -454,9 +453,14 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Animation script -->
+  <!-- Init -->
   <script>
       new WOW().init();
+
+      // MDB Lightbox Init
+      $(function () {
+          $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
   </script>
   <!-- Lazy loading -->
   <script>
@@ -472,6 +476,10 @@
 
   <!-- Main -->
   <script type="text/javascript" src="main.js"></script>
+  <script>
+      //First group of images
+      loadAllPhotos();
+  </script>
 </div>
 </body>
 
