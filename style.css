@@ -12,6 +12,10 @@
     display: none !important;
 }
 
+.hideContent {
+    display: none !important;
+}
+
 .betaHeading {
     padding-top: 5px;
     padding-bottom: 15px;
